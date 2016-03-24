@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24 mars 2016, 22:03:37
+    Author     : Youssef
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1280px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#main { background: #eee }
+
+#header {
+    height: 350px;
+    background: #aaa;
+}
+
+#footer {
+    height: 60px;
+    clear: left;
+    background: #aaa;
+}
+
+#indexLeftColumn {
+    height: 1920px;
+    width: 280px;
+    float: left;
+    background: #ccc;
+}
+
+#indexRightColumn {
+    height: 1920px;
+    width: 1000px;
+    float: left;
+    background: #eee;
+}

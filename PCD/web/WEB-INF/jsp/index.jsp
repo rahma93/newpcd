@@ -6,28 +6,26 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome to Spring Web MVC project</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
-    <div id="header">
-    <div id="widgetBar">
-
-        <div class="headerWidget">
-            [ language toggle ]
+    <div id="main">
+        <div id="header">
+            header
         </div>
 
-        <div class="headerWidget">
-            [ shopping cart widget ]
+        <div id="indexLeftColumn">
+            left column
         </div>
 
+        <div id="indexRightColumn">
+            right column
+        </div>
+
+        <div id="footer">
+            footer
+        </div>
     </div>
-
-    <a href="#">
-        <img src="#" id="logo" alt="Affable Bean logo">
-    </a>
-
-    <img src="#" id="logoText" alt="the affable bean">
-</div>
 </body>
 </html>

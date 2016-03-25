@@ -37,4 +37,13 @@
     <welcome-file-list>
         <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
+    <jsp-config>
+        <jsp-property-group>
+            <description>header and footer settings</description>
+            <url-pattern>/WEB-INF/jsp/view/*</url-pattern>
+            <url-pattern>/WEB-INF/jsp/index.jsp</url-pattern>
+            <include-prelude>/WEB-INF/jsp/view/header.jsp</include-prelude>
+            <include-coda>/WEB-INF/jsp/view/footer.jsp</include-coda>
+        </jsp-property-group>
+    </jsp-config>
 </web-app>

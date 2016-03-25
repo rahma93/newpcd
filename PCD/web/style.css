@@ -17,8 +17,7 @@ body {
 
 #header {
     height: 300px;
-    background-image: url("http://www.stlouischildrens.org/sites/default/files/imagecache/slideshow_image_landing/slideshow/health_banner_002_3.jpg");
-    
+    background-color: lightblue;
 }
 
 #footer {

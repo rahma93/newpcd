@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Administrateur" table="administrateur" catalog="pcd" optimistic-lock="version">
+        <id name="idadmin" type="int">
+            <column name="idadmin" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomadmin" type="string">
+            <column name="nomadmin" />
+        </property>
+        <property name="prenomadmin" type="string">
+            <column name="prenomadmin" />
+        </property>
+        <property name="emailadmin" type="string">
+            <column name="emailadmin" />
+        </property>
+        <property name="passwordadmin" type="string">
+            <column name="passwordadmin" />
+        </property>
+        <set name="statistiques" table="admi_avoir_stat" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="idadmin" not-null="true" />
+            </key>
+            <many-to-many entity-name="model.Statistique">
+                <column name="idstat" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

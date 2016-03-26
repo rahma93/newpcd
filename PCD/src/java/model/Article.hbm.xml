@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Article" table="article" catalog="pcd" optimistic-lock="version">
+        <id name="idarticle" type="int">
+            <column name="idarticle" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="agentMedical" class="model.AgentMedical" fetch="select">
+            <column name="idagent" />
+        </many-to-one>
+        <many-to-one name="forum" class="model.Forum" fetch="select">
+            <column name="idforum" />
+        </many-to-one>
+        <property name="articlecontent" type="string">
+            <column name="articlecontent" />
+        </property>
+        <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idarticle" />
+            </key>
+            <one-to-many class="model.Commentaire" />
+        </set>
+    </class>
+</hibernate-mapping>

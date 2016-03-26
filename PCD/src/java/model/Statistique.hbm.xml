@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Statistique" table="statistique" catalog="pcd" optimistic-lock="version">
+        <id name="idstat" type="int">
+            <column name="idstat" />
+            <generator class="assigned" />
+        </id>
+        <set name="administrateurs" table="admi_avoir_stat" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idstat" not-null="true" />
+            </key>
+            <many-to-many entity-name="model.Administrateur">
+                <column name="idadmin" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

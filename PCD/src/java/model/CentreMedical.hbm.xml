@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.CentreMedical" table="centre_medical" catalog="pcd" optimistic-lock="version">
+        <id name="idcentre" type="int">
+            <column name="idcentre" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="agentMedical" class="model.AgentMedical" fetch="select">
+            <column name="idagent" />
+        </many-to-one>
+        <property name="nomcentre" type="string">
+            <column name="nomcentre" />
+        </property>
+        <set name="profils" table="profil" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcentre" />
+            </key>
+            <one-to-many class="model.Profil" />
+        </set>
+        <set name="agentMedicals" table="agent_medical" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcentre" />
+            </key>
+            <one-to-many class="model.AgentMedical" />
+        </set>
+    </class>
+</hibernate-mapping>

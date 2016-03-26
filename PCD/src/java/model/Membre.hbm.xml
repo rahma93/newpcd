@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Membre" table="membre" catalog="pcd" optimistic-lock="version">
+        <id name="idmembre" type="int">
+            <column name="idmembre" />
+            <generator class="assigned" />
+        </id>
+        <property name="nommembre" type="string">
+            <column name="nommembre" />
+        </property>
+        <property name="prenommembre" type="string">
+            <column name="prenommembre" />
+        </property>
+        <property name="pseudomembre" type="string">
+            <column name="pseudomembre" />
+        </property>
+        <property name="emailmembre" type="string">
+            <column name="emailmembre" />
+        </property>
+        <property name="passwordmembre" type="string">
+            <column name="passwordmembre" />
+        </property>
+        <property name="numtelmembre" type="java.lang.Integer">
+            <column name="numtelmembre" />
+        </property>
+        <set name="membreDonnerNotes" table="membre_donner_note" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idmembre" not-null="true" />
+            </key>
+            <one-to-many class="model.MembreDonnerNote" />
+        </set>
+        <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idmembre" />
+            </key>
+            <one-to-many class="model.Commentaire" />
+        </set>
+    </class>
+</hibernate-mapping>

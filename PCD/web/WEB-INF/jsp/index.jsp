@@ -14,7 +14,7 @@
             index left
             
         </div>
-
+        
         <div id="indexRightColumn">
             index right
         </div>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.MembreDonnerNote" table="membre_donner_note" catalog="pcd" optimistic-lock="version">
+        <composite-id name="id" class="model.MembreDonnerNoteId">
+            <key-property name="idmembre" type="int">
+                <column name="idmembre" />
+            </key-property>
+            <key-property name="idnote" type="int">
+                <column name="idnote" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="membre" class="model.Membre" update="false" insert="false" fetch="select">
+            <column name="idmembre" not-null="true" />
+        </many-to-one>
+        <many-to-one name="note" class="model.Note" update="false" insert="false" fetch="select">
+            <column name="idnote" not-null="true" />
+        </many-to-one>
+        <property name="date1" type="java.lang.Integer">
+            <column name="date1" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26 mars 2016 16:46:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.AgentMedical" table="agent_medical" catalog="pcd" optimistic-lock="version">
+        <id name="idagent" type="int">
+            <column name="idagent" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="centreMedical" class="model.CentreMedical" fetch="select">
+            <column name="idcentre" />
+        </many-to-one>
+        <property name="nomagent" type="string">
+            <column name="nomagent" />
+        </property>
+        <property name="prenomagent" type="string">
+            <column name="prenomagent" />
+        </property>
+        <property name="pseudoagent" type="string">
+            <column name="pseudoagent" />
+        </property>
+        <property name="emailagent" type="string">
+            <column name="emailagent" />
+        </property>
+        <property name="passwordagent" type="string">
+            <column name="passwordagent" />
+        </property>
+        <property name="nomvilleagent" type="string">
+            <column name="nomvilleagent" />
+        </property>
+        <property name="nometatagent" type="string">
+            <column name="nometatagent" />
+        </property>
+        <property name="nompaysagent" type="string">
+            <column name="nompaysagent" />
+        </property>
+        <property name="codepostalagent" type="java.lang.Integer">
+            <column name="codepostalagent" />
+        </property>
+        <property name="typeagent" type="java.lang.Integer">
+            <column name="typeagent" />
+        </property>
+        <set name="centreMedicals" table="centre_medical" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idagent" />
+            </key>
+            <one-to-many class="model.CentreMedical" />
+        </set>
+        <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idagent" />
+            </key>
+            <one-to-many class="model.Commentaire" />
+        </set>
+        <set name="articles" table="article" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idagent" />
+            </key>
+            <one-to-many class="model.Article" />
+        </set>
+        <set name="profils" table="profil" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idagent" />
+            </key>
+            <one-to-many class="model.Profil" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -16,8 +16,8 @@
     <body> 
         <div id="header">
             <pre>
-                
-
+            <button class="button" onclick="location.href='index.htm'"><span>HOME </span></button>
+                    
 
 
 
@@ -26,7 +26,7 @@
 
             </pre>
             <center>
-            <table border="2">
+            <table>
                
                 <tr> <button class="button" onclick="location.href='comment.htm'"><span>Comment ca marche ? </span></button>
                 </tr>

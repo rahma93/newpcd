@@ -11,11 +11,12 @@
     <body>
     
         <div id="indexLeftColumn">
-            left column
+            index left
+            
         </div>
 
         <div id="indexRightColumn">
-            right column
+            index right
         </div>
    
 </body>

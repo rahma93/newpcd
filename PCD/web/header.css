@@ -8,15 +8,7 @@ and open the template in the editor.
     Author     : Youssef
 */
 
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 24 mars 2016, 22:03:37
-    Author     : Youssef
-*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 1400px;
@@ -32,9 +24,10 @@ body {
 }
 
 #footer {
-    height: 60px;
+    height: 300px;
+    background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xfp1/v/t35.0-12/12903503_10207557307868643_544919314_o.jpg?oh=e3fd9aa87d6c6c80fbd60efee639f4da&oe=56F74EC8");
+    background-repeat: no-repeat;
     clear: left;
-    background-color: lightblue;
     
 }
 

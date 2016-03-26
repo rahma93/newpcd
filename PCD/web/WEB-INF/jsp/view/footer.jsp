@@ -14,7 +14,19 @@
     <body>
         
         <div id="footer">
-            footer
+            <center>
+            <table >
+               
+                <tr> <button class="button" onclick="location.href='comment.htm'"><span>A propos de nous </span></button>
+                </tr>
+                <tr> <button class="button" onclick="location.href='comment.htm'"><span>Contactez nous </span></button>
+                </tr>
+                <tr> <button class="button" onclick="location.href='comment.htm'"><span>Conditions d'utilisations </span></button>
+                </tr>
+               
+                
+            </table>
+            </center>
         </div>
       
     </body>

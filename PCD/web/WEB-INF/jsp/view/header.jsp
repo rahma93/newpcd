@@ -24,21 +24,19 @@
 
 
 
-
-
             </pre>
             <center>
             <table border="2">
                
-                <tr> <button class="button" onclick="location.href='http://www.google.com'"><span>Comment ca marche ? </span></button>
+                <tr> <button class="button" onclick="location.href='comment.htm'"><span>Comment ca marche ? </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='http://www.google.com'"><span>Ajouter des Notes </span></button>
+                <tr> <button class="button" onclick="location.href='ajoutnotes.htm'"><span>Ajouter des Notes </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='http://www.google.com'"><span>Proposer un centre médical </span></button>
+                <tr> <button class="button" onclick="location.href='propcentre.htm'"><span>Proposer un centre médical </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='http://www.google.com'"><span>Lire notre blog </span></button>
+                <tr> <button class="button" onclick="location.href='lireblog.htm'"><span>Lire notre blog </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='http://www.google.com'"><span>Ajouter votre centre médical</span></button>
+                <tr> <button class="button" onclick="location.href='ajoutcentre.htm'"><span>Ajouter votre centre médical</span></button>
                 </tr>
                 
             </table>

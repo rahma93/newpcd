@@ -24,7 +24,7 @@ body {
 }
 
 #footer {
-    height: 300px;
+    height: 150px;
     background-image: url("https://scontent-lhr3-1.xx.fbcdn.net/hphotos-xfp1/v/t35.0-12/12903503_10207557307868643_544919314_o.jpg?oh=e3fd9aa87d6c6c80fbd60efee639f4da&oe=56F74EC8");
     background-repeat: no-repeat;
     clear: left;
@@ -48,7 +48,7 @@ body {
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: lightblue;
+  background-color: #0066ff;
   border: none;
   color: #FFFFFF;
   text-align: center;

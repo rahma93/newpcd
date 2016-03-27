@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 
@@ -9,7 +9,7 @@ package model;
 public class Photo  implements java.io.Serializable {
 
 
-     private int idphoto;
+     private Integer idphoto;
      private Profil profil;
      private String phototitre;
      private String photochemin;
@@ -17,22 +17,17 @@ public class Photo  implements java.io.Serializable {
     public Photo() {
     }
 
-	
-    public Photo(int idphoto) {
-        this.idphoto = idphoto;
-    }
-    public Photo(int idphoto, Profil profil, String phototitre, String photochemin) {
-       this.idphoto = idphoto;
+    public Photo(Profil profil, String phototitre, String photochemin) {
        this.profil = profil;
        this.phototitre = phototitre;
        this.photochemin = photochemin;
     }
    
-    public int getIdphoto() {
+    public Integer getIdphoto() {
         return this.idphoto;
     }
     
-    public void setIdphoto(int idphoto) {
+    public void setIdphoto(Integer idphoto) {
         this.idphoto = idphoto;
     }
     public Profil getProfil() {

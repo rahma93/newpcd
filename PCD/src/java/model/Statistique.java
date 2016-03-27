@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,26 +11,21 @@ import java.util.Set;
 public class Statistique  implements java.io.Serializable {
 
 
-     private int idstat;
+     private Integer idstat;
      private Set<Administrateur> administrateurs = new HashSet<Administrateur>(0);
 
     public Statistique() {
     }
 
-	
-    public Statistique(int idstat) {
-        this.idstat = idstat;
-    }
-    public Statistique(int idstat, Set<Administrateur> administrateurs) {
-       this.idstat = idstat;
+    public Statistique(Set<Administrateur> administrateurs) {
        this.administrateurs = administrateurs;
     }
    
-    public int getIdstat() {
+    public Integer getIdstat() {
         return this.idstat;
     }
     
-    public void setIdstat(int idstat) {
+    public void setIdstat(Integer idstat) {
         this.idstat = idstat;
     }
     public Set<Administrateur> getAdministrateurs() {

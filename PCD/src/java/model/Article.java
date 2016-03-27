@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Article  implements java.io.Serializable {
 
 
-     private int idarticle;
+     private Integer idarticle;
      private AgentMedical agentMedical;
      private Forum forum;
      private String articlecontent;
@@ -20,23 +20,18 @@ public class Article  implements java.io.Serializable {
     public Article() {
     }
 
-	
-    public Article(int idarticle) {
-        this.idarticle = idarticle;
-    }
-    public Article(int idarticle, AgentMedical agentMedical, Forum forum, String articlecontent, Set<Commentaire> commentaires) {
-       this.idarticle = idarticle;
+    public Article(AgentMedical agentMedical, Forum forum, String articlecontent, Set<Commentaire> commentaires) {
        this.agentMedical = agentMedical;
        this.forum = forum;
        this.articlecontent = articlecontent;
        this.commentaires = commentaires;
     }
    
-    public int getIdarticle() {
+    public Integer getIdarticle() {
         return this.idarticle;
     }
     
-    public void setIdarticle(int idarticle) {
+    public void setIdarticle(Integer idarticle) {
         this.idarticle = idarticle;
     }
     public AgentMedical getAgentMedical() {

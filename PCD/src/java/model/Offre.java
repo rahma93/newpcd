@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 
@@ -9,28 +9,23 @@ package model;
 public class Offre  implements java.io.Serializable {
 
 
-     private int idoffre;
+     private Integer idoffre;
      private Profil profil;
      private String offrenom;
 
     public Offre() {
     }
 
-	
-    public Offre(int idoffre) {
-        this.idoffre = idoffre;
-    }
-    public Offre(int idoffre, Profil profil, String offrenom) {
-       this.idoffre = idoffre;
+    public Offre(Profil profil, String offrenom) {
        this.profil = profil;
        this.offrenom = offrenom;
     }
    
-    public int getIdoffre() {
+    public Integer getIdoffre() {
         return this.idoffre;
     }
     
-    public void setIdoffre(int idoffre) {
+    public void setIdoffre(Integer idoffre) {
         this.idoffre = idoffre;
     }
     public Profil getProfil() {

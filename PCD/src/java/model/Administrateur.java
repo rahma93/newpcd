@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Administrateur  implements java.io.Serializable {
 
 
-     private int idadmin;
+     private Integer idadmin;
      private String nomadmin;
      private String prenomadmin;
      private String emailadmin;
@@ -21,12 +21,7 @@ public class Administrateur  implements java.io.Serializable {
     public Administrateur() {
     }
 
-	
-    public Administrateur(int idadmin) {
-        this.idadmin = idadmin;
-    }
-    public Administrateur(int idadmin, String nomadmin, String prenomadmin, String emailadmin, String passwordadmin, Set<Statistique> statistiques) {
-       this.idadmin = idadmin;
+    public Administrateur(String nomadmin, String prenomadmin, String emailadmin, String passwordadmin, Set<Statistique> statistiques) {
        this.nomadmin = nomadmin;
        this.prenomadmin = prenomadmin;
        this.emailadmin = emailadmin;
@@ -34,11 +29,11 @@ public class Administrateur  implements java.io.Serializable {
        this.statistiques = statistiques;
     }
    
-    public int getIdadmin() {
+    public Integer getIdadmin() {
         return this.idadmin;
     }
     
-    public void setIdadmin(int idadmin) {
+    public void setIdadmin(Integer idadmin) {
         this.idadmin = idadmin;
     }
     public String getNomadmin() {

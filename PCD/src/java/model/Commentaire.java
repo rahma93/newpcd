@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 
@@ -9,7 +9,7 @@ package model;
 public class Commentaire  implements java.io.Serializable {
 
 
-     private int idcommentaire;
+     private Integer idcommentaire;
      private AgentMedical agentMedical;
      private Article article;
      private Membre membre;
@@ -19,12 +19,7 @@ public class Commentaire  implements java.io.Serializable {
     public Commentaire() {
     }
 
-	
-    public Commentaire(int idcommentaire) {
-        this.idcommentaire = idcommentaire;
-    }
-    public Commentaire(int idcommentaire, AgentMedical agentMedical, Article article, Membre membre, Note note, String commentairecontent) {
-       this.idcommentaire = idcommentaire;
+    public Commentaire(AgentMedical agentMedical, Article article, Membre membre, Note note, String commentairecontent) {
        this.agentMedical = agentMedical;
        this.article = article;
        this.membre = membre;
@@ -32,11 +27,11 @@ public class Commentaire  implements java.io.Serializable {
        this.commentairecontent = commentairecontent;
     }
    
-    public int getIdcommentaire() {
+    public Integer getIdcommentaire() {
         return this.idcommentaire;
     }
     
-    public void setIdcommentaire(int idcommentaire) {
+    public void setIdcommentaire(Integer idcommentaire) {
         this.idcommentaire = idcommentaire;
     }
     public AgentMedical getAgentMedical() {

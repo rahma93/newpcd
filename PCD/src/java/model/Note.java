@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Note  implements java.io.Serializable {
 
 
-     private int idnote;
+     private Integer idnote;
      private Forum forum;
      private Integer notevaleur;
      private Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
@@ -20,23 +20,18 @@ public class Note  implements java.io.Serializable {
     public Note() {
     }
 
-	
-    public Note(int idnote) {
-        this.idnote = idnote;
-    }
-    public Note(int idnote, Forum forum, Integer notevaleur, Set<Commentaire> commentaires, Set<MembreDonnerNote> membreDonnerNotes) {
-       this.idnote = idnote;
+    public Note(Forum forum, Integer notevaleur, Set<Commentaire> commentaires, Set<MembreDonnerNote> membreDonnerNotes) {
        this.forum = forum;
        this.notevaleur = notevaleur;
        this.commentaires = commentaires;
        this.membreDonnerNotes = membreDonnerNotes;
     }
    
-    public int getIdnote() {
+    public Integer getIdnote() {
         return this.idnote;
     }
     
-    public void setIdnote(int idnote) {
+    public void setIdnote(Integer idnote) {
         this.idnote = idnote;
     }
     public Forum getForum() {

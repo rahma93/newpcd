@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Profil  implements java.io.Serializable {
 
 
-     private int idprofil;
+     private Integer idprofil;
      private AgentMedical agentMedical;
      private CentreMedical centreMedical;
      private String profilnom;
@@ -21,12 +21,7 @@ public class Profil  implements java.io.Serializable {
     public Profil() {
     }
 
-	
-    public Profil(int idprofil) {
-        this.idprofil = idprofil;
-    }
-    public Profil(int idprofil, AgentMedical agentMedical, CentreMedical centreMedical, String profilnom, Set<Photo> photos, Set<Offre> offres) {
-       this.idprofil = idprofil;
+    public Profil(AgentMedical agentMedical, CentreMedical centreMedical, String profilnom, Set<Photo> photos, Set<Offre> offres) {
        this.agentMedical = agentMedical;
        this.centreMedical = centreMedical;
        this.profilnom = profilnom;
@@ -34,11 +29,11 @@ public class Profil  implements java.io.Serializable {
        this.offres = offres;
     }
    
-    public int getIdprofil() {
+    public Integer getIdprofil() {
         return this.idprofil;
     }
     
-    public void setIdprofil(int idprofil) {
+    public void setIdprofil(Integer idprofil) {
         this.idprofil = idprofil;
     }
     public AgentMedical getAgentMedical() {

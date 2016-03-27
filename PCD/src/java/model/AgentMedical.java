@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class AgentMedical  implements java.io.Serializable {
 
 
-     private int idagent;
+     private Integer idagent;
      private CentreMedical centreMedical;
      private String nomagent;
      private String prenomagent;
@@ -31,12 +31,7 @@ public class AgentMedical  implements java.io.Serializable {
     public AgentMedical() {
     }
 
-	
-    public AgentMedical(int idagent) {
-        this.idagent = idagent;
-    }
-    public AgentMedical(int idagent, CentreMedical centreMedical, String nomagent, String prenomagent, String pseudoagent, String emailagent, String passwordagent, String nomvilleagent, String nometatagent, String nompaysagent, Integer codepostalagent, Integer typeagent, Set<CentreMedical> centreMedicals, Set<Commentaire> commentaires, Set<Article> articles, Set<Profil> profils) {
-       this.idagent = idagent;
+    public AgentMedical(CentreMedical centreMedical, String nomagent, String prenomagent, String pseudoagent, String emailagent, String passwordagent, String nomvilleagent, String nometatagent, String nompaysagent, Integer codepostalagent, Integer typeagent, Set<CentreMedical> centreMedicals, Set<Commentaire> commentaires, Set<Article> articles, Set<Profil> profils) {
        this.centreMedical = centreMedical;
        this.nomagent = nomagent;
        this.prenomagent = prenomagent;
@@ -54,11 +49,11 @@ public class AgentMedical  implements java.io.Serializable {
        this.profils = profils;
     }
    
-    public int getIdagent() {
+    public Integer getIdagent() {
         return this.idagent;
     }
     
-    public void setIdagent(int idagent) {
+    public void setIdagent(Integer idagent) {
         this.idagent = idagent;
     }
     public CentreMedical getCentreMedical() {

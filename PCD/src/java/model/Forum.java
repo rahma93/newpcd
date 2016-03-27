@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Forum  implements java.io.Serializable {
 
 
-     private int idforum;
+     private Integer idforum;
      private String forumnom;
      private Set<Article> articles = new HashSet<Article>(0);
      private Set<Note> notes = new HashSet<Note>(0);
@@ -19,22 +19,17 @@ public class Forum  implements java.io.Serializable {
     public Forum() {
     }
 
-	
-    public Forum(int idforum) {
-        this.idforum = idforum;
-    }
-    public Forum(int idforum, String forumnom, Set<Article> articles, Set<Note> notes) {
-       this.idforum = idforum;
+    public Forum(String forumnom, Set<Article> articles, Set<Note> notes) {
        this.forumnom = forumnom;
        this.articles = articles;
        this.notes = notes;
     }
    
-    public int getIdforum() {
+    public Integer getIdforum() {
         return this.idforum;
     }
     
-    public void setIdforum(int idforum) {
+    public void setIdforum(Integer idforum) {
         this.idforum = idforum;
     }
     public String getForumnom() {

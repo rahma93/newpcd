@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 
@@ -9,20 +9,17 @@ package model;
 public class Visiteur  implements java.io.Serializable {
 
 
-     private int numvisiteur;
+     private Integer numvisiteur;
 
     public Visiteur() {
     }
 
-    public Visiteur(int numvisiteur) {
-       this.numvisiteur = numvisiteur;
-    }
    
-    public int getNumvisiteur() {
+    public Integer getNumvisiteur() {
         return this.numvisiteur;
     }
     
-    public void setNumvisiteur(int numvisiteur) {
+    public void setNumvisiteur(Integer numvisiteur) {
         this.numvisiteur = numvisiteur;
     }
 

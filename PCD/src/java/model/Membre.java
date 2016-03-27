@@ -1,5 +1,5 @@
 package model;
-// Generated 26 mars 2016 16:46:25 by Hibernate Tools 4.3.1
+// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 public class Membre  implements java.io.Serializable {
 
 
-     private int idmembre;
+     private Integer idmembre;
      private String nommembre;
      private String prenommembre;
      private String pseudomembre;
@@ -24,12 +24,7 @@ public class Membre  implements java.io.Serializable {
     public Membre() {
     }
 
-	
-    public Membre(int idmembre) {
-        this.idmembre = idmembre;
-    }
-    public Membre(int idmembre, String nommembre, String prenommembre, String pseudomembre, String emailmembre, String passwordmembre, Integer numtelmembre, Set<MembreDonnerNote> membreDonnerNotes, Set<Commentaire> commentaires) {
-       this.idmembre = idmembre;
+    public Membre(String nommembre, String prenommembre, String pseudomembre, String emailmembre, String passwordmembre, Integer numtelmembre, Set<MembreDonnerNote> membreDonnerNotes, Set<Commentaire> commentaires) {
        this.nommembre = nommembre;
        this.prenommembre = prenommembre;
        this.pseudomembre = pseudomembre;
@@ -40,11 +35,11 @@ public class Membre  implements java.io.Serializable {
        this.commentaires = commentaires;
     }
    
-    public int getIdmembre() {
+    public Integer getIdmembre() {
         return this.idmembre;
     }
     
-    public void setIdmembre(int idmembre) {
+    public void setIdmembre(Integer idmembre) {
         this.idmembre = idmembre;
     }
     public String getNommembre() {

@@ -43,6 +43,7 @@
             <url-pattern>/WEB-INF/jsp/view/*</url-pattern>
             <url-pattern>/WEB-INF/jsp/propcentre.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/ajoutcentre.jsp</url-pattern>
+            <url-pattern>/WEB-INF/jsp/pswdforgotten.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/ajoutnotes.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/index.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/comment.jsp</url-pattern>

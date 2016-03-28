@@ -1,16 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <SCRIPT TYPE="text/javascript"> 
+        <!-- 
+        function popup(mylink, windowname) 
+        { if (! window.focus)return true; 
+          var href; 
+          if (typeof(mylink) === 'string') href=mylink; 
+          else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); 
+          return false; 
+      } //--> 
+        </SCRIPT>
+
+    </h:head>
+    <h:body>
+       <h1>Welcome !</h1>
+		<h:form>
+			<h:inputText id="email" value="#{userBean.email}" a:placeholder="What's your email?" />
+                        <h:inputSecret id="pswd" value="#{userBean.pswd}" a:placeholder="What's your password?" />
+			<h:commandButton value="Submit" action="#{userBean.verifyUser}" />
+		</h:form>
+        
+       
+        <a href="register.htm"> <h1>nouveau utilisateur ?</h1> </a>
+        
+        <a href="pswdforgotten.htm"> <h1>mot de passe oublié ?</h1> </a>
+     
+    </h:body>
+    
+        
 </html>

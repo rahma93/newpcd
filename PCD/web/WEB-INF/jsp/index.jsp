@@ -11,8 +11,8 @@
     <body>
     
         <div id="indexLeftColumn">
-            index left
-            
+            <iframe src="login.xhtml" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+    </iframe>
         </div>
         
         <div id="indexRightColumn">

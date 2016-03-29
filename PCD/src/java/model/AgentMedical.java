@@ -1,5 +1,5 @@
 package model;
-// Generated 27 mars 2016 14:38:31 by Hibernate Tools 4.3.1
+// Generated 29 mars 2016 13:18:27 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -13,16 +13,17 @@ public class AgentMedical  implements java.io.Serializable {
 
      private Integer idagent;
      private CentreMedical centreMedical;
+     private Integer passwordagent;
      private String nomagent;
      private String prenomagent;
-     private String pseudoagent;
      private String emailagent;
-     private String passwordagent;
      private String nomvilleagent;
-     private String nometatagent;
-     private String nompaysagent;
+     private String nompadresseagent;
      private Integer codepostalagent;
+     private Integer telagent;
      private Integer typeagent;
+     private Integer lon;
+     private Integer lat;
      private Set<CentreMedical> centreMedicals = new HashSet<CentreMedical>(0);
      private Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
      private Set<Article> articles = new HashSet<Article>(0);
@@ -31,18 +32,19 @@ public class AgentMedical  implements java.io.Serializable {
     public AgentMedical() {
     }
 
-    public AgentMedical(CentreMedical centreMedical, String nomagent, String prenomagent, String pseudoagent, String emailagent, String passwordagent, String nomvilleagent, String nometatagent, String nompaysagent, Integer codepostalagent, Integer typeagent, Set<CentreMedical> centreMedicals, Set<Commentaire> commentaires, Set<Article> articles, Set<Profil> profils) {
+    public AgentMedical(CentreMedical centreMedical, Integer passwordagent, String nomagent, String prenomagent, String emailagent, String nomvilleagent, String nompadresseagent, Integer codepostalagent, Integer telagent, Integer typeagent, Integer lon, Integer lat, Set<CentreMedical> centreMedicals, Set<Commentaire> commentaires, Set<Article> articles, Set<Profil> profils) {
        this.centreMedical = centreMedical;
+       this.passwordagent = passwordagent;
        this.nomagent = nomagent;
        this.prenomagent = prenomagent;
-       this.pseudoagent = pseudoagent;
        this.emailagent = emailagent;
-       this.passwordagent = passwordagent;
        this.nomvilleagent = nomvilleagent;
-       this.nometatagent = nometatagent;
-       this.nompaysagent = nompaysagent;
+       this.nompadresseagent = nompadresseagent;
        this.codepostalagent = codepostalagent;
+       this.telagent = telagent;
        this.typeagent = typeagent;
+       this.lon = lon;
+       this.lat = lat;
        this.centreMedicals = centreMedicals;
        this.commentaires = commentaires;
        this.articles = articles;
@@ -63,6 +65,13 @@ public class AgentMedical  implements java.io.Serializable {
     public void setCentreMedical(CentreMedical centreMedical) {
         this.centreMedical = centreMedical;
     }
+    public Integer getPasswordagent() {
+        return this.passwordagent;
+    }
+    
+    public void setPasswordagent(Integer passwordagent) {
+        this.passwordagent = passwordagent;
+    }
     public String getNomagent() {
         return this.nomagent;
     }
@@ -77,26 +86,12 @@ public class AgentMedical  implements java.io.Serializable {
     public void setPrenomagent(String prenomagent) {
         this.prenomagent = prenomagent;
     }
-    public String getPseudoagent() {
-        return this.pseudoagent;
-    }
-    
-    public void setPseudoagent(String pseudoagent) {
-        this.pseudoagent = pseudoagent;
-    }
     public String getEmailagent() {
         return this.emailagent;
     }
     
     public void setEmailagent(String emailagent) {
         this.emailagent = emailagent;
-    }
-    public String getPasswordagent() {
-        return this.passwordagent;
-    }
-    
-    public void setPasswordagent(String passwordagent) {
-        this.passwordagent = passwordagent;
     }
     public String getNomvilleagent() {
         return this.nomvilleagent;
@@ -105,19 +100,12 @@ public class AgentMedical  implements java.io.Serializable {
     public void setNomvilleagent(String nomvilleagent) {
         this.nomvilleagent = nomvilleagent;
     }
-    public String getNometatagent() {
-        return this.nometatagent;
+    public String getNompadresseagent() {
+        return this.nompadresseagent;
     }
     
-    public void setNometatagent(String nometatagent) {
-        this.nometatagent = nometatagent;
-    }
-    public String getNompaysagent() {
-        return this.nompaysagent;
-    }
-    
-    public void setNompaysagent(String nompaysagent) {
-        this.nompaysagent = nompaysagent;
+    public void setNompadresseagent(String nompadresseagent) {
+        this.nompadresseagent = nompadresseagent;
     }
     public Integer getCodepostalagent() {
         return this.codepostalagent;
@@ -126,12 +114,33 @@ public class AgentMedical  implements java.io.Serializable {
     public void setCodepostalagent(Integer codepostalagent) {
         this.codepostalagent = codepostalagent;
     }
+    public Integer getTelagent() {
+        return this.telagent;
+    }
+    
+    public void setTelagent(Integer telagent) {
+        this.telagent = telagent;
+    }
     public Integer getTypeagent() {
         return this.typeagent;
     }
     
     public void setTypeagent(Integer typeagent) {
         this.typeagent = typeagent;
+    }
+    public Integer getLon() {
+        return this.lon;
+    }
+    
+    public void setLon(Integer lon) {
+        this.lon = lon;
+    }
+    public Integer getLat() {
+        return this.lat;
+    }
+    
+    public void setLat(Integer lat) {
+        this.lat = lat;
     }
     public Set<CentreMedical> getCentreMedicals() {
         return this.centreMedicals;

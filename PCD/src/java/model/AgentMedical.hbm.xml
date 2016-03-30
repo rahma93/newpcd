@@ -1,18 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 29 mars 2016 13:18:29 by Hibernate Tools 4.3.1 -->
+<!-- Generated 30 mars 2016 10:59:17 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="model.AgentMedical" table="agent_medical" catalog="pcd" optimistic-lock="version">
         <id name="idagent" type="java.lang.Integer">
             <column name="idagent" />
             <generator class="identity" />
         </id>
-        <many-to-one name="centreMedical" class="model.CentreMedical" fetch="select">
-            <column name="idcentre" />
-        </many-to-one>
-        <property name="passwordagent" type="java.lang.Integer">
-            <column name="passwordagent" />
+        <property name="passwordagent" type="string">
+            <column name="passwordagent" length="11" />
         </property>
         <property name="nomagent" type="string">
             <column name="nomagent" />
@@ -44,12 +41,6 @@
         <property name="lat" type="java.lang.Integer">
             <column name="lat" />
         </property>
-        <set name="centreMedicals" table="centre_medical" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="idagent" />
-            </key>
-            <one-to-many class="model.CentreMedical" />
-        </set>
         <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="idagent" />

@@ -1,0 +1,83 @@
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>adding product</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </h:head>
+    <h:body>
+       <h3>Inscription</h3>
+		<h:form id="agentForm">
+                    <table>
+                        <tr>
+                            <td><h:outputLabel value="NOM Agent" /></td>
+                            <td><h:inputText value="#{ABean.nomagent}" /></td> 
+                            <td><h:outputLabel value="Prenom Agent:" /></td>
+                            <td><h:inputText value="#{ABean.prenomagent}"/></td>
+                        </tr>
+                        <tr> 
+                            <td><h:outputLabel value="password:" /></td>
+                            <td><h:inputSecret value="#{ABean.passwordagent}" /></td> <br />
+			</tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="email:" /></td>
+                            <td><h:inputText value="#{ABean.emailagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="Ville :" /></td>
+                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="Adresse :" /></td>
+                            <td><h:inputText value="#{ABean.nompadresseagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="Code postal :" /></td>
+                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="téléphone :" /></td>
+                            <td><h:inputText value="#{ABean.telagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="type :" /></td>
+                            <td><h:inputText value="#{ABean.typeagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="longtitude :" /></td>
+                            <td><h:inputText value="#{ABean.lon}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="latitude :" /></td>
+                            <td><h:inputText value="#{ABean.lat}"/></td><br/>
+                        </tr>
+                        <tr> 
+                            <td><h:outputLabel value="Description Offre :" /></td>
+                            <td><h:inputText value="#{ABean.offreAgent}"/></td><br/>
+                        </tr>
+                        <tr>
+                            <td><h:outputLabel value="nom photo:" /></td>
+                            <td><h:inputText value="#{ABean.phototitre}" /></td> 
+                            <td><h:outputLabel value="url photo:" /></td>
+                            <td><h:inputText value="#{ABean.photochemin}"/></td>
+                        </tr>
+                    </table>
+			
+                        <h:commandButton value="Submit" action="#{ABean.saveagent}"/>
+                        
+		</h:form>
+       
+   
+   </h:body>
+    
+        
+</html>

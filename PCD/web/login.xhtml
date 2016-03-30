@@ -18,17 +18,47 @@
 
     </h:head>
     <h:body>
-       <h1>Welcome !</h1>
+       
 		<h:form>
-			<h:inputText id="email" value="#{userBean.email}" a:placeholder="What's your email?" />
-                        <h:inputSecret id="pswd" value="#{userBean.pswd}" a:placeholder="What's your password?" />
-			<h:commandButton value="Submit" action="#{userBean.verifyUser}" />
+                    <table>
+                        <tr>
+                        <td>
+                        <h1>Bienvenue !</h1>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <h:inputText id="email" value="#{ABean.emailagent}" a:placeholder="What's your email?" />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <h:inputSecret id="pswd" value="#{ABean.passwordagent}" a:placeholder="What's your password?" /> 
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <h:commandButton value="Submit" action="#{ABean.verifyUser}" />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <a href="newagent.xhtml"> <h1>nouveau utilisateur ?</h1> </a>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <a href="pswdforgotten.htm"> <h1>mot de passe oublié ?</h1> </a>
+                        </td>
+                        </tr>
+                        
+                    </table>
 		</h:form>
         
        
-        <a href="register.htm"> <h1>nouveau utilisateur ?</h1> </a>
         
-        <a href="pswdforgotten.htm"> <h1>mot de passe oublié ?</h1> </a>
+        
+        
      
     </h:body>
     

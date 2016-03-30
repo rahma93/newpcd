@@ -12,7 +12,6 @@
     <mapping resource="model/Visiteur.hbm.xml"/>
     <mapping resource="model/Note.hbm.xml"/>
     <mapping resource="model/Photo.hbm.xml"/>
-    <mapping resource="model/CentreMedical.hbm.xml"/>
     <mapping resource="model/Membre.hbm.xml"/>
     <mapping resource="model/Article.hbm.xml"/>
     <mapping resource="model/MembreDonnerNote.hbm.xml"/>

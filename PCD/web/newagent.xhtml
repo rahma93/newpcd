@@ -1,18 +1,22 @@
 
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>adding product</title>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </h:head>
     <h:body>
-       <h3>Inscription</h3>
+       
 		<h:form id="agentForm">
                     <table>
+                        <tr> <h3> Inscription </h3> </tr>
                         <tr>
                             <td><h:outputLabel value="NOM Agent" /></td>
-                            <td><h:inputText value="#{ABean.nomagent}" /></td> 
+                            <td><h:inputText value="#{ABean.nomagent}" /></td> <br/>
+                        </tr>
+                        <tr>    
                             <td><h:outputLabel value="Prenom Agent:" /></td>
                             <td><h:inputText value="#{ABean.prenomagent}"/></td>
                         </tr>
@@ -38,7 +42,7 @@
                         <tr></tr>
                         <tr> 
                             <td><h:outputLabel value="Code postal :" /></td>
-                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
+                            <td><h:inputText value="#{ABean.codepostalagent}"/></td><br/>
                         </tr>
                         <tr></tr>
                         <tr> 
@@ -48,7 +52,13 @@
                         <tr></tr>
                         <tr> 
                             <td><h:outputLabel value="type :" /></td>
-                            <td><h:inputText value="#{ABean.typeagent}"/></td><br/>
+                            <td><h:selectOneMenu value="#{ABean.typeagent}">
+                                <f:selectItem itemValue="1" itemLabel="Clinique" />
+                                <f:selectItem itemValue="2" itemLabel="Médecin" />
+                                <f:selectItem itemValue="3" itemLabel="Dentiste" />
+                                <f:selectItem itemValue="4" itemLabel="Pharmacien" />
+                                <f:selectItem itemValue="5" itemLabel="Hopital" />
+                                </h:selectOneMenu>	</td>
                         </tr>
                         <tr></tr>
                         <tr> 
@@ -66,7 +76,9 @@
                         </tr>
                         <tr>
                             <td><h:outputLabel value="nom photo:" /></td>
-                            <td><h:inputText value="#{ABean.phototitre}" /></td> 
+                            <td><h:inputText value="#{ABean.phototitre}" /></td> <br/>
+                        </tr>
+                        <tr>
                             <td><h:outputLabel value="url photo:" /></td>
                             <td><h:inputText value="#{ABean.photochemin}"/></td>
                         </tr>

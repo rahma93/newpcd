@@ -31,6 +31,7 @@ public class AgentMedicalBean {
      private Integer typeagent;
      private Integer lon;
      private Integer lat;
+     private String type;
      
      private Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
      private Set<Article> articles = new HashSet<Article>(0);
@@ -122,6 +123,14 @@ public class AgentMedicalBean {
 
     public String getEmailagent() {
         return emailagent;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setEmailagent(String emailagent) {

@@ -4,7 +4,7 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <title>Welcome</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
 
     </h:head>
     <h:body>
@@ -15,10 +15,14 @@
                         <tr>
                         <td>
                             
-                        <h1>Bienvenue #{user.emailagent} !</h1>
+                        <h1>Bienvenue <br/> #{user.emailagent} !</h1>
                         </td>
                         </tr>
-                            
+                        <tr>
+                        <td>
+                        <a href="pswdforgotten.htm"> <h4>modifier votre compte</h4> </a>
+                        </td>
+                        </tr> 
                         <tr>
                         <td>
                         <h:commandButton value="Logout" action="#{ABean.logout}" />
@@ -43,12 +47,12 @@
                         </tr>
                         <tr>
                         <td>
-                        <a href="newagent.xhtml"> <h1>nouveau utilisateur ?</h1> </a>
+                        <a href="newagent.xhtml"> <h4>nouveau utilisateur ?</h4> </a>
                         </td>
                         </tr>
                         <tr>
                         <td>
-                        <a href="pswdforgotten.htm"> <h1>mot de passe oublié ?</h1> </a>
+                        <a href="pswdforgotten.htm"> <h4>mot de passe oublié ?</h4> </a>
                         </td>
                         </tr>
                         </h:panelGroup>

@@ -9,13 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="layout.css">
     </head>
 
     <body>
     
         <div id="indexLeftColumn">
-            propcentre left
+            <iframe height="800" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            </iframe>
         </div>
 
         <div id="indexRightColumn">

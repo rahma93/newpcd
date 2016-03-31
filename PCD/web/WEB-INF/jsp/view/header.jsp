@@ -36,7 +36,7 @@
                 </tr>
                 <tr> <button class="button" onclick="location.href='lireblog.htm'"><span>Lire notre blog </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='ajoutcentre.htm'"><span>Ajouter votre centre médical</span></button>
+                <tr> <button class="button" onclick="location.href='ajoutcentre.htm'"><span>Rechercher un centre médical</span></button>
                 </tr>
                 
             </table>

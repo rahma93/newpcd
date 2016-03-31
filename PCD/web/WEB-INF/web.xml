@@ -55,11 +55,11 @@
             <description>header and footer settings</description>
             <url-pattern>/WEB-INF/jsp/view/*</url-pattern>
             <url-pattern>/WEB-INF/jsp/propcentre.jsp</url-pattern>
-            <url-pattern>/WEB-INF/jsp/ajoutcentre.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/pswdforgotten.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/ajoutnotes.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/index.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/comment.jsp</url-pattern>
+            <url-pattern>/WEB-INF/jsp/recherchecentre.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/lireblog.jsp</url-pattern>
             <include-prelude>/WEB-INF/jsp/view/header.jsp</include-prelude>
             <include-coda>/WEB-INF/jsp/view/footer.jsp</include-coda>

@@ -37,15 +37,15 @@ form{
 }
 
 #indexLeftColumn {
-    height: 1920px;
-    width: 500px;
+    height: 850px;
+    width: 400px;
     float: left;
     
 }
 
 #indexRightColumn {
-    height: 1920px;
-    width: 900px;
+    height: 850px;
+    width: 1000px;
     float: left;
     
 }

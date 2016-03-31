@@ -21,7 +21,7 @@ import org.apache.commons.logging.LogFactory;
 
 import java.io.IOException;
 
-public class AjoutcentreController implements Controller {
+public class RecherchecentreController implements Controller {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
@@ -31,7 +31,7 @@ public class AjoutcentreController implements Controller {
 
         logger.info("Returning comment view");
 
-        return new ModelAndView("ajoutcentre");
+        return new ModelAndView("recherchecentre");
     }
 
 }

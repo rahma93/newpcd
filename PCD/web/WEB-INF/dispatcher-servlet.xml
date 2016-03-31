@@ -11,7 +11,7 @@
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class="controller.CommentController" id="CommentKey"/>
-    <bean class="controller.AjoutcentreController" id="AjoutcentretKey"/> 
+    <bean class="controller.RecherchecentreController" id="AjoutcentretKey"/> 
     <bean class="controller.AjoutnotesController" id="AjoutnotesKey"/> 
     <bean class="controller.LireblogController" id="LireblogKey"/> 
     <bean class="controller.PropcentreController" id="PropcentreKey"/> 

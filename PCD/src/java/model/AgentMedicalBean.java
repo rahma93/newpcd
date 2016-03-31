@@ -48,6 +48,9 @@ public class AgentMedicalBean {
      
      private String offreAgent;
      
+     private Set result ;
+     
+     
     public String saveagent(){
                 Session session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();
@@ -79,7 +82,7 @@ public class AgentMedicalBean {
 		return "output";
                             }
     
-    public ModelAndView findagent(){
+    public String findagent(){
         
         Session session = HibernateUtil.getSessionFactory().openSession();
        //AgentMedicalDAO agentDAO = new AgentMedicalDAO();
@@ -87,16 +90,16 @@ public class AgentMedicalBean {
        AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
         
        //Integer response = agentDAO.verify(emailagent,passwordagent);
-       String hql = "select * from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'";
-       Query query = session.createQuery(hql);
-       List<Integer> results = query.list();
+       //String hql = "";
+       //Query query = session.createQuery(hql);
+       List result = session.createQuery("select * from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'").list();
+       
        session.getTransaction().commit();
        session.close();
-       ModelAndView mv= new ModelAndView ("resultatrecherche");
-       mv.addObject("resultatrecherche",results);
-       return mv ; 
-       
-       
+       //ModelAndView mv= new ModelAndView ("resultatrecherche");
+       //mv.addObject("resultatrecherche",results);
+       return "resultatrecherche" ; 
+      
     }
     public String verifyUser(){
 		AgentMedicalDAO agentDAO = new AgentMedicalDAO();
@@ -114,6 +117,14 @@ public class AgentMedicalBean {
 
     public void setIdagent(Integer idagent) {
         this.idagent = idagent;
+    }
+
+    public Set getResult() {
+        return result;
+    }
+
+    public void setResult(Set result) {
+        this.result = result;
     }
 
     

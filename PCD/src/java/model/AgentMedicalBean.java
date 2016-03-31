@@ -5,10 +5,13 @@
  */
 package model;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -76,7 +79,25 @@ public class AgentMedicalBean {
 		return "output";
                             }
     
-    
+    public ModelAndView findagent(){
+        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+       //AgentMedicalDAO agentDAO = new AgentMedicalDAO();
+       session.beginTransaction();
+       AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
+        
+       //Integer response = agentDAO.verify(emailagent,passwordagent);
+       String hql = "select * from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'";
+       Query query = session.createQuery(hql);
+       List<Integer> results = query.list();
+       session.getTransaction().commit();
+       session.close();
+       ModelAndView mv= new ModelAndView ("resultatrecherche");
+       mv.addObject("resultatrecherche",results);
+       return mv ; 
+       
+       
+    }
     public String verifyUser(){
 		AgentMedicalDAO agentDAO = new AgentMedicalDAO();
 		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);

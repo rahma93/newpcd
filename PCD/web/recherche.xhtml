@@ -7,44 +7,41 @@ and open the template in the editor.
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <head>
+   
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
+ </h:head>
+    <h:body>
   
         <h3>Recherche </h3>
         
                     <table>
                         <tr>
-                            <td><h:outputLabel value="Nom de l'agent:" /></td>
-                            <td><h:inputText value="#{ABean.nomagent}" /></td> 
-                             </tr>
-                              <tr></tr>
-
-                        <tr>
-                            <td><h:outputLabel value="Prenom de l'agent:" /></td>
-                            <td><h:inputText value="#{ABean.prenomagent}"/></td>
-                        </tr>
-                         <tr></tr>
-                        <tr> 
                             <td><h:outputLabel value="Emplacement" /></td>
                             <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
                         </tr>
                         <tr></tr>
                         
-                       
+                        <tr>
                             <td><h:outputLabel value="Type de l'agent" /></td>
-                            <td><h:inputText value="#{ABean.typeagent}"/></td><br/>
+                            <td><h:selectOneMenu value="#{ABean.typeagent}">
+                                <f:selectItem itemValue="1" itemLabel="Clinique" />
+                                <f:selectItem itemValue="2" itemLabel="Médecin" />
+                                <f:selectItem itemValue="3" itemLabel="Dentiste" />
+                                <f:selectItem itemValue="4" itemLabel="Pharmacien" />
+                                <f:selectItem itemValue="5" itemLabel="Hopital" />
+                                </h:selectOneMenu>	</td><br/>
                         </tr>
                         <tr></tr>
               
-                    </table>
+                        <tr>
 			
-                        <h:commandButton value="Submit" action="#{ABean.findagent}"/>
-                        
+                            <td><h:commandButton value="Submit" action="#{ABean.findagent}"/></td>
+                        </tr>
+                    </table>   
 	
-    
+    </h:body>  
 </html>

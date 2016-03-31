@@ -1,47 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head>
-   
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- </h:head>
+    <h:head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    </h:head>
     <h:body>
-  
-        <h3>Recherche </h3>
-        
+       
+		<h:form>
                     <table>
                         <tr>
-                            <td><h:outputLabel value="Emplacement" /></td>
-                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
+                        <td>
+                        <h1>Recherche !</h1>
+                        </td>
                         </tr>
-                        <tr></tr>
-                        
                         <tr>
-                            <td><h:outputLabel value="Type de l'agent" /></td>
-                            <td><h:selectOneMenu value="#{ABean.typeagent}">
+                        <td>
+                            <h:inputText id="email" value="#{ABean.nomvilleagent}" a:placeholder="Ville" />
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <h:selectOneMenu id="type" value="#{ABean.typeagent}">
                                 <f:selectItem itemValue="1" itemLabel="Clinique" />
                                 <f:selectItem itemValue="2" itemLabel="Médecin" />
                                 <f:selectItem itemValue="3" itemLabel="Dentiste" />
                                 <f:selectItem itemValue="4" itemLabel="Pharmacien" />
                                 <f:selectItem itemValue="5" itemLabel="Hopital" />
-                                </h:selectOneMenu>	</td><br/>
+                                </h:selectOneMenu>
+                        </td>
                         </tr>
-                        <tr></tr>
-              
                         <tr>
-			
-                            <td><h:commandButton value="Submit" action="#{ABean.findagent}"/></td>
+                        <td>
+                            <h:commandButton value="Submit" action="#{ABean.fagent}" />
+                        </td>
                         </tr>
-                    </table>   
-	
-    </h:body>  
+                        
+                        
+                        
+                    </table>
+		</h:form>
+        
+       
+        
+        
+        
+     
+    </h:body>
+    
+        
 </html>

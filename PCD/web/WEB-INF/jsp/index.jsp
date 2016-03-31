@@ -12,9 +12,9 @@
     
         <div id="indexLeftColumn">
             
-            <iframe height="400" width="400" src="recherche.xhtml" name="targetframe2" allowTransparency="no" scrolling="no" frameborder="4" >
+            <iframe height="400" width="500" src="recherche.xhtml" name="targetframe2" allowTransparency="no" scrolling="no" frameborder="4" >
             </iframe>
-            <iframe height="900" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
+            <iframe height="900" width="500" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
             </iframe>
         </div>
         

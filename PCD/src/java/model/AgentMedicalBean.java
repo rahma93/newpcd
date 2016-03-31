@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestScoped
 
 public class AgentMedicalBean {
-    
+    private List<AgentMedical> AgentMedicals;
      private Integer idagent;
      private String passwordagent;
      private String nomagent;
@@ -48,7 +48,6 @@ public class AgentMedicalBean {
      
      private String offreAgent;
      
-     private Set result ;
      
      
     public String saveagent(){
@@ -81,26 +80,20 @@ public class AgentMedicalBean {
 		//System.out.println("User successfully saved.");
 		return "output";
                             }
-    
-    public String findagent(){
-        
+    public String find(){
+    return "output";
+    }
+    public String fagent(){
         Session session = HibernateUtil.getSessionFactory().openSession();
-       //AgentMedicalDAO agentDAO = new AgentMedicalDAO();
        session.beginTransaction();
        AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
-        
-       //Integer response = agentDAO.verify(emailagent,passwordagent);
-       //String hql = "";
-       //Query query = session.createQuery(hql);
-       List result = session.createQuery("select * from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'").list();
-       
+
+       AgentMedicals = session.createQuery("from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'").list();
        session.getTransaction().commit();
        session.close();
-       //ModelAndView mv= new ModelAndView ("resultatrecherche");
-       //mv.addObject("resultatrecherche",results);
-       return "resultatrecherche" ; 
-      
+        return "resultatrecherche" ; 
     }
+    
     public String verifyUser(){
 		AgentMedicalDAO agentDAO = new AgentMedicalDAO();
 		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
@@ -119,13 +112,17 @@ public class AgentMedicalBean {
         this.idagent = idagent;
     }
 
-    public Set getResult() {
-        return result;
+    public List<AgentMedical> getAgentMedicals() {
+        return AgentMedicals;
     }
 
-    public void setResult(Set result) {
-        this.result = result;
+    public void setAgentMedicals(List<AgentMedical> AgentMedicals) {
+        this.AgentMedicals = AgentMedicals;
     }
+
+    
+
+    
 
     
 

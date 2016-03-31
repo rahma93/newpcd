@@ -11,16 +11,37 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-         <tr>
-                        <td>
+  
         <h3>Recherche </h3>
-        </td>
+        
+                    <table>
+                        <tr>
+                            <td><h:outputLabel value="Nom de l'agent:" /></td>
+                            <td><h:inputText value="#{ABean.nomagent}" /></td> 
+                             </tr>
+                              <tr></tr>
+
+                        <tr>
+                            <td><h:outputLabel value="Prenom de l'agent:" /></td>
+                            <td><h:inputText value="#{ABean.prenomagent}"/></td>
                         </tr>
-    </body>
-         <tr>
-                        <td>
-                            <h:inputText id="nomagent" value="#{ABean.nomagent}" a:placeholder="Nom du centre médical" />
-                        </td>
+                         <tr></tr>
+                        <tr> 
+                            <td><h:outputLabel value="Emplacement" /></td>
+                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
                         </tr>
+                        <tr></tr>
+                        
+                       
+                            <td><h:outputLabel value="Type de l'agent" /></td>
+                            <td><h:inputText value="#{ABean.typeagent}"/></td><br/>
+                        </tr>
+                        <tr></tr>
+              
+                    </table>
+			
+                        <h:commandButton value="Submit" action="#{ABean.findagent}"/>
+                        
+	
     
 </html>

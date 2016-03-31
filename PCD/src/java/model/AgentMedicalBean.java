@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package model;
+import static com.mchange.v2.c3p0.impl.C3P0Defaults.password;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+import org.apache.catalina.User;
+import static org.apache.tomcat.jni.User.username;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.web.servlet.ModelAndView;
@@ -98,10 +102,25 @@ public class AgentMedicalBean {
 		AgentMedicalDAO agentDAO = new AgentMedicalDAO();
 		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
 		Integer response = agentDAO.verify(emailagent,passwordagent);
-		if (response==2) return "adminloggedin";
-                        else if (response==1) return "userloggedin";
+		if (response==2) {
+                                    FacesContext context = FacesContext.getCurrentInstance();
+                                    context.getExternalContext().getSessionMap().put("user", agent);
+                                    return "login";
+                                  }
+                        else if (response==1) {
+                           // User user = userService.find(username, password);
+                            FacesContext context = FacesContext.getCurrentInstance();
+                            context.getExternalContext().getSessionMap().put("user", agent);
+                            return "login";
+                                
+                        }
                 else return "welcome";
                 }
+    
+    public String logout(){
+        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        return "login";
+        }
     
     
      public Integer getIdagent() {

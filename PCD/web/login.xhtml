@@ -11,11 +11,21 @@
        
 		<h:form>
                     <table>
+                           <h:panelGroup rendered="#{not empty user}">
                         <tr>
                         <td>
-                        <h1>Bienvenue !</h1>
+                            
+                        <h1>Bienvenue #{user.emailagent} !</h1>
                         </td>
                         </tr>
+                            
+                        <tr>
+                        <td>
+                        <h:commandButton value="Logout" action="#{ABean.logout}" />
+                        </td>
+                        </tr>
+                           </h:panelGroup> 
+                        <h:panelGroup rendered="#{empty user}">
                         <tr>
                         <td>
                             <h:inputText id="email" value="#{ABean.emailagent}" a:placeholder="What's your email?" />
@@ -41,7 +51,7 @@
                         <a href="pswdforgotten.htm"> <h1>mot de passe oublié ?</h1> </a>
                         </td>
                         </tr>
-                        
+                        </h:panelGroup>
                     </table>
 		</h:form>
         

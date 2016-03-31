@@ -11,9 +11,11 @@
     <body>
     
         <div id="indexLeftColumn">
-            <iframe height="400" width="400" src="recherche.xhtml" name="targetframe2" allowTransparency="no" scrolling="no" frameborder="2" >
-    </iframe>
+            
             <iframe height="800" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="2" >
+
+            <iframe height="400" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="2" >
+
     </iframe>
         </div>
         

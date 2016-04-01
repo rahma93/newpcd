@@ -10,38 +10,32 @@
     </h:head>
     <h:body>
        
-		<h:form>
-                    <table>
-                        <tr>
-                        <td>
-                        <h1>Recherche !</h1>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <h:inputText id="email" value="#{ABean.nomvilleagent}" a:placeholder="Ville" />
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <h:selectOneMenu id="type" value="#{ABean.typeagent}">
+		<h:form class="register">
+                    
+                        <h1 class="register-title">Recherche !</h1>
+                        
+                            <h:inputText class="register-input" id="email" value="#{ABean.nomvilleagent}" a:placeholder="Ville" />
+                        
+                            <table>
+                            <tr>
+                                <td><h:outputLabel class="register-input" value="Proprieté :" /></td>
+                                <td><h:selectOneMenu styleClass="menu" value="#{ABean.typeagent}">
+                                
                                 <f:selectItem itemValue="1" itemLabel="Clinique" />
                                 <f:selectItem itemValue="2" itemLabel="Médecin" />
                                 <f:selectItem itemValue="3" itemLabel="Dentiste" />
                                 <f:selectItem itemValue="4" itemLabel="Pharmacien" />
                                 <f:selectItem itemValue="5" itemLabel="Hopital" />
-                                </h:selectOneMenu>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <h:commandButton value="Submit" action="#{ABean.fagent}" />
-                        </td>
-                        </tr>
+                                    </h:selectOneMenu></td>
+                                </tr>
+                                    </table>
+                        
+                            <h:commandButton class="register-button" value="Submit" action="#{ABean.fagent}" />
                         
                         
                         
-                    </table>
+                        
+                    
 		</h:form>
         
        

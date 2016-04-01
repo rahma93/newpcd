@@ -20,10 +20,11 @@
         </div>
 
         <div id="indexRightColumn">
-            <pre><h2>Bienvenue dans notre site
+            
+            <pre><h1 class="comm">Bienvenue dans notre site
 vous pouvez ajouter votre 
 centre médical en terminant votre inscription
-ou rechercher un centre prés de chez vous par<a href="recherchecentre.htm"> ici<a></h2></pre>
+ou rechercher un centre prés de chez vous par</h1> <a href="recherchecentre.htm"> ici<a></pre>
         </div>
    
 </body>

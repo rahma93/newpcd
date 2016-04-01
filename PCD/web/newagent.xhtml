@@ -2,90 +2,52 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <title>x</title>
         <link rel="stylesheet" type="text/css" href="layout.css"/>
     </h:head>
     <h:body>
        
-		<h:form id="agentForm">
-                    <table>
-                        <tr> <h3> Inscription </h3> </tr>
-                        <tr>
-                            <td><h:outputLabel value="NOM Agent" /></td>
-                            <td><h:inputText value="#{ABean.nomagent}" /></td> <br/>
-                        </tr>
-                        <tr>    
-                            <td><h:outputLabel value="Prenom Agent:" /></td>
-                            <td><h:inputText value="#{ABean.prenomagent}"/></td>
-                        </tr>
-                        <tr> 
-                            <td><h:outputLabel value="password:" /></td>
-                            <td><h:inputSecret value="#{ABean.passwordagent}" /></td> <br />
-			</tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="email:" /></td>
-                            <td><h:inputText value="#{ABean.emailagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="Ville :" /></td>
-                            <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="Adresse :" /></td>
-                            <td><h:inputText value="#{ABean.nompadresseagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="Code postal :" /></td>
-                            <td><h:inputText value="#{ABean.codepostalagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="téléphone :" /></td>
-                            <td><h:inputText value="#{ABean.telagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="type :" /></td>
-                            <td><h:selectOneMenu value="#{ABean.typeagent}">
-                                <f:selectItem itemValue="0" itemLabel="Simple membre" />
+		<h:form class="register" id="agentForm">
+                    
+                         <h1 class="register-title"> Inscription </h1>
+                        
+                         <h:inputText class="register-input" p:placeholder="NOM" value="#{ABean.nomagent}" />
+                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{ABean.prenomagent}"/>
+                        <h:inputSecret class="register-input" p:placeholder="Mot de passe" value="#{ABean.passwordagent}" />
+			<h:inputText class="register-input" p:placeholder="Email" value="#{ABean.emailagent}"/>
+                        <h:inputText class="register-input" p:placeholder="Ville" value="#{ABean.nomvilleagent}"/>
+                        <h:inputText class="register-input" p:placeholder="Adresse" value="#{ABean.nompadresseagent}"/>
+                        <h:inputText class="register-input" p:placeholder="Code Postal" value="#{ABean.codepostalagent}"/>
+                        <h:inputText class="register-input" p:placeholder="Téléphone" value="#{ABean.telagent}"/>
+                        <table>
+                            <tr>
+                                <td><h:outputLabel class="register-input" value="Proprieté :" /></td>
+                                <td><h:selectOneMenu styleClass="menu" value="#{ABean.typeagent}">
+                                <f:selectItem itemValue="0" itemLabel="Simple membre"/>
                                 <f:selectItem itemValue="1" itemLabel="Clinique" />
                                 <f:selectItem itemValue="2" itemLabel="Médecin" />
                                 <f:selectItem itemValue="3" itemLabel="Dentiste" />
                                 <f:selectItem itemValue="4" itemLabel="Pharmacien" />
                                 <f:selectItem itemValue="5" itemLabel="Hopital" />
-                                </h:selectOneMenu>	</td>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="longtitude :" /></td>
-                            <td><h:inputText value="#{ABean.lon}"/></td><br/>
-                        </tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="latitude :" /></td>
-                            <td><h:inputText value="#{ABean.lat}"/></td><br/>
-                        </tr>
-                        <tr> 
-                            <td><h:outputLabel value="Description Offre :" /></td>
-                            <td><h:inputText value="#{ABean.offreAgent}"/></td><br/>
-                        </tr>
-                        <tr>
-                            <td><h:outputLabel value="nom photo:" /></td>
-                            <td><h:inputText value="#{ABean.phototitre}" /></td> <br/>
-                        </tr>
-                        <tr>
-                            <td><h:outputLabel value="url photo:" /></td>
-                            <td><h:inputText value="#{ABean.photochemin}"/></td>
-                        </tr>
-                    </table>
+                                    </h:selectOneMenu></td>
+                                </tr>
+                                    </table>
+                        
+                        <h:inputText class="register-input" p:placeholder="Longtitude" value="#{ABean.lon}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="Latitude" value="#{ABean.lat}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="Description Offre" value="#{ABean.offreAgent}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="Nom Photo" value="#{ABean.phototitre}" />
+                        
+                        <h:inputText class="register-input" p:placeholder="URL photo" value="#{ABean.photochemin}"/>
+                        
 			
-                    <h:commandButton value="Submit" action="#{ABean.saveagent()}"/>
+                    <h:commandButton class="register-button" value="Submit" action="#{ABean.saveagent()}"/>
                         
 		</h:form>
        

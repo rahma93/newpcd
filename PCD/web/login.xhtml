@@ -9,54 +9,32 @@
     </h:head>
     <h:body>
        
-		<h:form>
-                    <table>
-                           <h:panelGroup rendered="#{not empty user}">
-                        <tr>
-                        <td>
-                            
-                        <h1>Bienvenue <br/> #{user.emailagent} !</h1>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
+		<h:form class="register">
+                    
+                         <h:panelGroup rendered="#{not empty user}">
+                        
+                        <h1 class="register-title">Bienvenue <br/> #{user.emailagent} !</h1>
+                        
                         <a href="pswdforgotten.htm"> <h4>modifier votre compte</h4> </a>
-                        </td>
-                        </tr> 
-                        <tr>
-                        <td>
-                        <h:commandButton value="Logout" action="#{ABean.logout}" />
-                        </td>
-                        </tr>
+                        
+                        <h:commandButton class="register-button" value="Logout" action="#{ABean.logout}" />
+                        
                            </h:panelGroup> 
                         <h:panelGroup rendered="#{empty user}">
-                        <tr>
-                        <td>
-                            <h:inputText id="email" value="#{ABean.emailagent}" a:placeholder="What's your email?" />
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                            <h:inputSecret id="pswd" value="#{ABean.passwordagent}" a:placeholder="What's your password?" /> 
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
-                        <h:commandButton value="Submit" action="#{ABean.verifyUser}" />
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
+                            <h1 class="register-title">Connection</h1>
+                        
+                            <h:inputText class="register-input" id="email" value="#{ABean.emailagent}" a:placeholder="What's your email?" />
+                        
+                            <h:inputSecret class="register-input" id="pswd" value="#{ABean.passwordagent}" a:placeholder="What's your password?" /> 
+                        
+                        <h:commandButton class="register-button" value="Submit" action="#{ABean.verifyUser}" />
+                        
                         <a href="newagent.xhtml"> <h4>nouveau utilisateur ?</h4> </a>
-                        </td>
-                        </tr>
-                        <tr>
-                        <td>
+                        
                         <a href="pswdforgotten.htm"> <h4>mot de passe oublié ?</h4> </a>
-                        </td>
-                        </tr>
+                        
                         </h:panelGroup>
-                    </table>
+                    
 		</h:form>
         
        

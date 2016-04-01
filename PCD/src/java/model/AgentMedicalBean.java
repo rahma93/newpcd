@@ -84,9 +84,39 @@ public class AgentMedicalBean {
 		//System.out.println("User successfully saved.");
 		return "output";
                             }
-    public String find(){
-    return "output";
-    }
+    
+    public String propagent(){
+                Session session = HibernateUtil.getSessionFactory().openSession();
+                session.beginTransaction();
+		//AgentMedicalDAO userDao = new AgentMedicalDAO();
+                
+                Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
+                Set<Article> articles = new HashSet<Article>(0);
+                Set<Profil> profils = new HashSet<Profil>(0);
+                
+                Set<Photo> photos = new HashSet<Photo>(0);
+                Set<Offre> offres = new HashSet<Offre>(0);
+                
+		AgentMedical agent = new AgentMedical("non disponible",nomagent,prenomagent,"non disponible",nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
+		
+                session.save(agent);
+                
+                Profil profil=new Profil(agent,nomagent,photos,offres);
+		session.save(profil);
+                
+                Offre offre=new Offre(profil,"non disponible");
+                session.save(offre);
+                
+                Photo photo=new Photo(profil,"non disponible","non disponible");
+                session.save(photo);
+		//produitDao.save(produit);
+                session.getTransaction().commit();
+		session.close();
+		//System.out.println("User successfully saved.");
+		return "output";
+                            }
+    
+     
     public String fagent(){
         Session session = HibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();

@@ -20,7 +20,8 @@
         </div>
 
         <div id="indexRightColumn">
-            propcentre right
+            <iframe height="800" width="1000" src="prop.xhtml" name="targetframe2" allowTransparency="no" scrolling="no" frameborder="4" >
+            </iframe>
         </div>
    
 </body>

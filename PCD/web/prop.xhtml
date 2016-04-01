@@ -8,10 +8,17 @@
         <link rel="stylesheet" type="text/css" href="layout.css"/>
     </h:head>
     <h:body>
-       
+                <h:panelGroup rendered="#{not empty user}">
 		<h:form id="agentForm">
                     <table>
-                        <tr> <h3> Inscription </h3> </tr>
+                         
+                        <tr>
+                        <td>
+                            
+                        <h1>Bienvenue <br/> #{user.emailagent} !</h1>
+                        </td>
+                        </tr>
+                        <tr> <h3> Proposition d'un centre médical </h3> </tr>
                         <tr>
                             <td><h:outputLabel value="NOM Agent" /></td>
                             <td><h:inputText value="#{ABean.nomagent}" /></td> <br/>
@@ -20,16 +27,7 @@
                             <td><h:outputLabel value="Prenom Agent:" /></td>
                             <td><h:inputText value="#{ABean.prenomagent}"/></td>
                         </tr>
-                        <tr> 
-                            <td><h:outputLabel value="password:" /></td>
-                            <td><h:inputSecret value="#{ABean.passwordagent}" /></td> <br />
-			</tr>
-                        <tr></tr>
-                        <tr> 
-                            <td><h:outputLabel value="email:" /></td>
-                            <td><h:inputText value="#{ABean.emailagent}"/></td><br/>
-                        </tr>
-                        <tr></tr>
+                        
                         <tr> 
                             <td><h:outputLabel value="Ville :" /></td>
                             <td><h:inputText value="#{ABean.nomvilleagent}"/></td><br/>
@@ -53,7 +51,6 @@
                         <tr> 
                             <td><h:outputLabel value="type :" /></td>
                             <td><h:selectOneMenu value="#{ABean.typeagent}">
-                                <f:selectItem itemValue="0" itemLabel="Simple membre" />
                                 <f:selectItem itemValue="1" itemLabel="Clinique" />
                                 <f:selectItem itemValue="2" itemLabel="Médecin" />
                                 <f:selectItem itemValue="3" itemLabel="Dentiste" />
@@ -71,10 +68,7 @@
                             <td><h:outputLabel value="latitude :" /></td>
                             <td><h:inputText value="#{ABean.lat}"/></td><br/>
                         </tr>
-                        <tr> 
-                            <td><h:outputLabel value="Description Offre :" /></td>
-                            <td><h:inputText value="#{ABean.offreAgent}"/></td><br/>
-                        </tr>
+                        
                         <tr>
                             <td><h:outputLabel value="nom photo:" /></td>
                             <td><h:inputText value="#{ABean.phototitre}" /></td> <br/>
@@ -85,11 +79,18 @@
                         </tr>
                     </table>
 			
-                    <h:commandButton value="Submit" action="#{ABean.saveagent()}"/>
+                    <h:commandButton value="Submit" action="#{ABean.propagent}"/>
                         
 		</h:form>
        
-   
+                </h:panelGroup>
+        <h:panelGroup rendered="#{empty user}">
+            
+                <h1>Vous devez être connecté pour <br/>
+                    pouvoir proposer un centre méedical !
+                </h1>
+            
+        </h:panelGroup>
    </h:body>
     
         

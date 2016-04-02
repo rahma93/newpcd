@@ -65,11 +65,13 @@ public class AgentMedicalBean {
                 
                 Set<Photo> photos = new HashSet<Photo>(0);
                 Set<Offre> offres = new HashSet<Offre>(0);
-                
+                Set<MembreDonnerNote> membreDonnerNotes = new HashSet<MembreDonnerNote>(0);
 		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
 		
                 session.save(agent);
                 
+                Membre membre=new Membre(nomagent, prenomagent, nomagent, emailagent, passwordagent, telagent, membreDonnerNotes, commentaires);
+                session.save(membre);
                 Profil profil=new Profil(agent,nomagent,photos,offres);
 		session.save(profil);
                 

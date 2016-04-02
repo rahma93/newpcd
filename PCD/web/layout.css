@@ -53,7 +53,7 @@ form{
 .button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #0066ff;
+  background-color: #6699ff;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -152,7 +152,7 @@ table {
 body {
   font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #404040;
-  background: #2d4259;
+  background:#6699ff;
 }
 
 .register-title {

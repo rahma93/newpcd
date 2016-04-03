@@ -56,7 +56,7 @@
             <url-pattern>/WEB-INF/jsp/view/*</url-pattern>
             <url-pattern>/WEB-INF/jsp/propcentre.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/pswdforgotten.jsp</url-pattern>
-            <url-pattern>/WEB-INF/jsp/ajoutnotes.jsp</url-pattern>
+            <url-pattern>/WEB-INF/jsp/afficheroffres.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/index.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/comment.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/recherchecentre.jsp</url-pattern>

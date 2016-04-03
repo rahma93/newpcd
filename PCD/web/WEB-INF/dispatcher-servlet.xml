@@ -12,7 +12,7 @@
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class="controller.CommentController" id="CommentKey"/>
     <bean class="controller.RecherchecentreController" id="AjoutcentretKey"/> 
-    <bean class="controller.AjoutnotesController" id="AjoutnotesKey"/> 
+    <bean class="controller.AfficheroffresController" id="AfficheroffresKey"/> 
     <bean class="controller.LireblogController" id="LireblogKey"/> 
     <bean class="controller.PropcentreController" id="PropcentreKey"/> 
     <bean class="controller.RegisterController" id="RegisterKey"/> 
@@ -29,7 +29,7 @@
                 <prop key="index.htm">indexController</prop>
                 <prop key="comment.htm">CommentKey</prop>
                 <prop key="ajoutcentre.htm">AjoutcentretKey</prop>
-                <prop key="ajoutnotes.htm">AjoutnotesKey</prop>
+                <prop key="afficheroffres.htm">AfficheroffresKey</prop>
                 <prop key="lireblog.htm">LireblogKey</prop>
                 <prop key="propcentre.htm">PropcentreKey</prop>
                 <prop key="register.htm">RegisterKey</prop>

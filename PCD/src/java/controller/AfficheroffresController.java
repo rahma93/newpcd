@@ -22,7 +22,7 @@ import org.apache.commons.logging.LogFactory;
 
 import java.io.IOException;
 
-public class AjoutnotesController implements Controller {
+public class AfficheroffresController implements Controller {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
@@ -32,7 +32,7 @@ public class AjoutnotesController implements Controller {
 
         logger.info("Returning comment view");
 
-        return new ModelAndView("ajoutnotes");
+        return new ModelAndView("afficheroffres");
     }
 
 }

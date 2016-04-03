@@ -20,7 +20,7 @@
         </div>
 
         <div id="indexRightColumn">
-            ajoutnotes right
+            affiche offres right
         </div>
    
 </body>

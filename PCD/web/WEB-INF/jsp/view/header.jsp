@@ -30,7 +30,7 @@
                
                 <tr> <button class="button" onclick="location.href='comment.htm'"><span>Comment ca marche ? </span></button>
                 </tr>
-                <tr> <button class="button" onclick="location.href='ajoutnotes.htm'"><span>Ajouter des Notes </span></button>
+                <tr> <button class="button" onclick="location.href='afficheroffres.htm'"><span>Afficher les offres </span></button>
                 </tr>
                 <tr> <button class="button" onclick="location.href='propcentre.htm'"><span>Proposer un centre médical </span></button>
                 </tr>

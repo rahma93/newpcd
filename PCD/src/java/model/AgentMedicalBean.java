@@ -89,14 +89,23 @@ public class AgentMedicalBean {
     public String modifagent(){
             Session session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();
- 
-    AgentMedical agent =(AgentMedical) session.load(AgentMedical.class,emailagent);
-    agent.setPasswordagent(passwordagent);
-    
-   session.update(agent);
-    session.getTransaction().commit();
+                FacesContext fc = FacesContext.getCurrentInstance();
+                String email = (String)fc.getApplication().createValueBinding("#{user.emailagent}").getValue(fc);
+                
+                String hql = "UPDATE AgentMedical set passwordagent = :a ,lon= :e ,lat= :g "  + "WHERE emailagent = :b";
+		Query query = session.createQuery(hql);
+                query.setParameter("a", passwordagent);
+                
+                query.setParameter("e",lon );
+                query.setParameter("g",lat);
+
+                query.setParameter("b", email);
+                query.executeUpdate();
+               
+		
+                
+                session.getTransaction().commit();
 		session.close();
-		//System.out.println("User successfully saved.");
 		return "login";
     }
     public String propagent(){

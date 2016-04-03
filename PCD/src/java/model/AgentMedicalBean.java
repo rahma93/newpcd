@@ -86,7 +86,19 @@ public class AgentMedicalBean {
 		//System.out.println("User successfully saved.");
 		return "output";
                             }
+    public String modifagent(){
+            Session session = HibernateUtil.getSessionFactory().openSession();
+                session.beginTransaction();
+ 
+    AgentMedical agent =(AgentMedical) session.load(AgentMedical.class,emailagent);
+    agent.setPasswordagent(passwordagent);
     
+   session.update(agent);
+    session.getTransaction().commit();
+		session.close();
+		//System.out.println("User successfully saved.");
+		return "login";
+    }
     public String propagent(){
                 Session session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();

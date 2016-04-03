@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+            xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+>
+    <h:head>
+        <title>X</title>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
+
+    </h:head>
+    <h:body>
+     
+        
+        		<h:form class="register">
+
+                              <h:inputSecret class="register-input" p:placeholder="#{user.passwordagent}"  value="#{ABean.passwordagent}"/>
+
+                        <h:inputText class="register-input" p:placeholder="#{user.lon}"  value="#{ABean.lon}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="#{user.lat}"  value="#{ABean.lat}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="offre" value="#{ABean.offreAgent}"/>
+             
+                        <h:inputText class="register-input" p:placeholder="url photo" value="#{ABean.photochemin}"/>
+                        
+			
+                    <h:commandButton class="register-button" value="Submit" action="#{ABean.modifagent}"/>
+        
+                        </h:form> 
+    </h:body>
+</html>

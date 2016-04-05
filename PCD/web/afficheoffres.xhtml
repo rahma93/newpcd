@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>x</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
+    </head>
+    <body>
+        <div style="overflow-x:auto;">
+        <h:dataTable value="#{ABean.agentMedicals}" var="agents" border="5">
+        
+         
+            
+            <h:column>
+                <f:facet name="header">NOM</f:facet>
+                #{agents.nomagent}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Prénom</f:facet>
+                #{agents.prenomagent}
+            </h:column>
+            <h:column>
+                <f:facet name="header">   ADRESSE   </f:facet>
+                #{agents.nompadresseagent}
+            </h:column>
+            
+            
+        
+            
+        </h:dataTable>
+        <h:dataTable value="#{ABean.AOffres}" var="offres" border="5">
+            <h:column>
+                <f:facet name="header">Offre</f:facet>
+                #{offres.offrenom}
+            </h:column>
+        </h:dataTable>
+        </div>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 30 mars 2016 10:59:17 by Hibernate Tools 4.3.1 -->
+<!-- Generated 5 avr. 2016 13:48:20 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="model.AgentMedical" table="agent_medical" catalog="pcd" optimistic-lock="version">
         <id name="idagent" type="java.lang.Integer">
@@ -9,7 +9,7 @@
             <generator class="identity" />
         </id>
         <property name="passwordagent" type="string">
-            <column name="passwordagent" length="11" />
+            <column name="passwordagent" />
         </property>
         <property name="nomagent" type="string">
             <column name="nomagent" />
@@ -29,17 +29,17 @@
         <property name="codepostalagent" type="java.lang.Integer">
             <column name="codepostalagent" />
         </property>
-        <property name="telagent" type="java.lang.Integer">
+        <property name="telagent" type="string">
             <column name="telagent" />
         </property>
         <property name="typeagent" type="java.lang.Integer">
             <column name="typeagent" />
         </property>
-        <property name="lon" type="java.lang.Integer">
-            <column name="lon" />
+        <property name="lon" type="java.lang.Double">
+            <column name="lon" precision="22" scale="0" />
         </property>
-        <property name="lat" type="java.lang.Integer">
-            <column name="lat" />
+        <property name="lat" type="java.lang.Double">
+            <column name="lat" precision="22" scale="0" />
         </property>
         <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
             <key>

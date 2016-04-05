@@ -34,10 +34,10 @@ public class AgentMedicalBean {
      private String nomvilleagent;
      private String nompadresseagent;
      private Integer codepostalagent;
-     private Integer telagent;
+     private String telagent;
      private Integer typeagent;
-     private Integer lon;
-     private Integer lat;
+     private double lon;
+     private double lat;
      private String type;
      
      private Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
@@ -51,7 +51,7 @@ public class AgentMedicalBean {
      private String photochemin;
      
      private String offreAgent;
-     
+     private List<Offre> AOffres;
      
      
     public String saveagent(){
@@ -70,7 +70,7 @@ public class AgentMedicalBean {
 		
                 session.save(agent);
                 
-                Membre membre=new Membre(nomagent, prenomagent, nomagent, emailagent, passwordagent, telagent, membreDonnerNotes, commentaires);
+                Membre membre=new Membre(nomagent, prenomagent, nomagent, emailagent, passwordagent, null, membreDonnerNotes, commentaires);
                 session.save(membre);
                 Profil profil=new Profil(agent,nomagent,photos,offres);
 		session.save(profil);
@@ -157,9 +157,21 @@ public class AgentMedicalBean {
        AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
 
        AgentMedicals = session.createQuery("from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'").list();
+       
        session.getTransaction().commit();
        session.close();
         return "resultatrecherche" ; 
+    }
+    public String afficheoffres(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+       session.beginTransaction();
+       AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
+
+       AOffres = session.createQuery("from Offre").list();
+       AgentMedicals = session.createQuery("from AgentMedical").list();
+       session.getTransaction().commit();
+       session.close();
+        return "afficheoffres" ; 
     }
     
     public String verifyUser(){
@@ -169,7 +181,7 @@ public class AgentMedicalBean {
 		if (response==2) {
                                     FacesContext context = FacesContext.getCurrentInstance();
                                     context.getExternalContext().getSessionMap().put("user", agent);
-                                    return "login";
+                                    return "adminloggedin";
                                   }
                         else if (response==1) {
                            // User user = userService.find(username, password);
@@ -201,6 +213,14 @@ public class AgentMedicalBean {
 
     public void setAgentMedicals(List<AgentMedical> AgentMedicals) {
         this.AgentMedicals = AgentMedicals;
+    }
+    
+    public List<Offre> getAOffres() {
+        return AOffres;
+    }
+
+    public void setAOffres(List<Offre> AOffres) {
+        this.AOffres = AOffres;
     }
 
     
@@ -273,11 +293,11 @@ public class AgentMedicalBean {
         this.codepostalagent = codepostalagent;
     }
 
-    public Integer getTelagent() {
+    public String getTelagent() {
         return telagent;
     }
 
-    public void setTelagent(Integer telagent) {
+    public void setTelagent(String telagent) {
         this.telagent = telagent;
     }
 
@@ -289,19 +309,19 @@ public class AgentMedicalBean {
         this.typeagent = typeagent;
     }
 
-    public Integer getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(Integer lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
-    public Integer getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(Integer lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
@@ -363,9 +383,6 @@ public class AgentMedicalBean {
         this.photochemin = photochemin;
     }
 
-    public Set<Offre> getOffres() {
-        return offres;
-    }
 
     public void setOffres(Set<Offre> offres) {
         this.offres = offres;

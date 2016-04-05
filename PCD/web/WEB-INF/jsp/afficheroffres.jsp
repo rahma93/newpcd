@@ -20,7 +20,8 @@
         </div>
 
         <div id="indexRightColumn">
-            affiche offres right
+            <iframe height="800" width="1000" src="affiche.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            </iframe>
         </div>
    
 </body>

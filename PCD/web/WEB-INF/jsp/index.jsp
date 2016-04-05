@@ -18,7 +18,8 @@
         </div>
         
         <div id="indexRightColumn">
-            index right
+            <iframe height="800" width="1000" src="map.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            </iframe>
         </div>
    
 </body>

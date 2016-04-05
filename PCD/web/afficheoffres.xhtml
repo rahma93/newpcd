@@ -17,11 +17,9 @@ and open the template in the editor.
     </head>
     <body>
         <div style="overflow-x:auto;">
+        <h:panelGrid id="aa" columns="2">
         <h:dataTable value="#{ABean.agentMedicals}" var="agents" border="5">
-        
-         
-            
-            <h:column>
+        <h:column>
                 <f:facet name="header">NOM</f:facet>
                 #{agents.nomagent}
             </h:column>
@@ -29,21 +27,15 @@ and open the template in the editor.
                 <f:facet name="header">Prénom</f:facet>
                 #{agents.prenomagent}
             </h:column>
-            <h:column>
-                <f:facet name="header">   ADRESSE   </f:facet>
-                #{agents.nompadresseagent}
-            </h:column>
-            
-            
-        
-            
-        </h:dataTable>
+            </h:dataTable>
+       
         <h:dataTable value="#{ABean.AOffres}" var="offres" border="5">
             <h:column>
                 <f:facet name="header">Offre</f:facet>
                 #{offres.offrenom}
             </h:column>
         </h:dataTable>
-        </div>
+        </h:panelGrid>
+    </div>
     </body>
 </html>

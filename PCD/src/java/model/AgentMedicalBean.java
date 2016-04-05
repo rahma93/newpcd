@@ -8,6 +8,7 @@ import static com.mchange.v2.c3p0.impl.C3P0Defaults.password;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -162,16 +163,23 @@ public class AgentMedicalBean {
        session.close();
         return "resultatrecherche" ; 
     }
-    public String afficheoffres(){
+    
+    @PostConstruct
+    public void afficheoffres(){
         Session session = HibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();
        AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
 
        AOffres = session.createQuery("from Offre").list();
        AgentMedicals = session.createQuery("from AgentMedical").list();
+       /*List<String> AOffres;
+       for(int k=0  ;k<AgentMedicals.size();k++)
+       {
+           (AgentMedicals.get(k)).setOffreAgent(AOffres.get(k));
+       };*/
        session.getTransaction().commit();
        session.close();
-        return "afficheoffres" ; 
+        //return "afficheoffres" ; 
     }
     
     public String verifyUser(){

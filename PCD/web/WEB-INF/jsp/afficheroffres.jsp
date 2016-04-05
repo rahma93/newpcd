@@ -20,7 +20,7 @@
         </div>
 
         <div id="indexRightColumn">
-            <iframe height="800" width="1000" src="affiche.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            <iframe height="800" width="1000" src="afficheoffres.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
             </iframe>
         </div>
    

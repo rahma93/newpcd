@@ -38,14 +38,14 @@ form{
 
 #indexLeftColumn {
     height: 850px;
-    width: 500px;
+    width: 400px;
     float: left;
     
 }
 
 #indexRightColumn {
     height: 850px;
-    width: 900px;
+    width: 1000px;
     float: left;
     
 }
@@ -352,4 +352,19 @@ tr{background-color:#FFFFFF}
 th {
     background-color: #4CAF50;
     color: white;
+}
+
+
+#indexL{
+    height: 850px;
+    width: 600px;
+    float: left;
+    
+}
+
+#indexR{
+    height: 850px;
+    width: 400px;
+    float: left;
+    
 }

@@ -155,8 +155,6 @@ public class AgentMedicalBean {
     public String fagent(){
         Session session = HibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();
-       AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
-
        AgentMedicals = session.createQuery("from AgentMedical where nomvilleagent='" + nomvilleagent + "' and typeagent='" + typeagent+"'").list();
        
        session.getTransaction().commit();

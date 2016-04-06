@@ -79,23 +79,21 @@ public class AgentMedicalBean {
                 FacesContext fc = FacesContext.getCurrentInstance();
                 String email = (String)fc.getApplication().createValueBinding("#{user.emailagent}").getValue(fc);
                 
-                String hql = "UPDATE AgentMedical set passwordagent = :a ,lon= :e ,lat= :g "  + "WHERE emailagent = :b";
+                String hql = "UPDATE AgentMedical set passwordagent = :a ,lon= :e ,lat= :g, offre= :f, urlphoto= :h "  + "WHERE emailagent = :b";
 		
-                String hql1="select photochemin from Photo where idprofil=(select idprofil from Profil where idagent=(select idagent from AgentMedical where emailagent=email))" ;
-                String hql2="select offrenom from Offre where idprofil=(select idprofil from Profil where idagent=(select idagent from AgentMedical where emailagent=email))" ;
-                String hql3 = "UPDATE Offre set offrenom = :f  "  + "WHERE idprofil = idprofil=(select idprofil from Profil where idagent=(select idagent from AgentMedical where emailagent=email))";
-                String hql4 = "UPDATE Profil set photochemin = :k "  + "WHERE idprofil= = (select idprofil from Profil where idagent=(select idagent from AgentMedical where emailagent=email))";
+                
                 
                 Query query = session.createQuery(hql);
-                Query query2 = session.createQuery(hql2);
-                Query query3 = session.createQuery(hql3);
-                Query query4 = session.createQuery(hql4);
+                
 
                 query.setParameter("a", passwordagent);
                 
                 query.setParameter("e",lon );
                 query.setParameter("g",lat);
-                
+                query.setParameter("f",offre);
+                query.setParameter("h",urlphoto);
+
+
                 query.setParameter("b", email);
                 query.executeUpdate();
                

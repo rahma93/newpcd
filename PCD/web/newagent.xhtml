@@ -15,9 +15,9 @@
 	        var latitude = position.coords.latitude;
 	        var longitude = position.coords.longitude;
 	        var altitude = position.coords.altitude;
-	        document.getElementById('geolocation').innerHTML = 'latitude : ' + latitude + '<br />' + 'longitude : ' + longitude + '<br />' + 'altitude : ' + altitude + '<br />';
-                document.getElementById('lat').value = latitude;
-                document.getElementById('lon').value = longitude;
+	        //document.getElementById('geolocation').innerHTML = 'latitude : ' + latitude + '<br />' + 'longitude : ' + longitude + '<br />' + 'altitude : ' + altitude + '<br />';
+                document.getElementById('agentForm:a').value = latitude;
+                document.getElementById('agentForm:b').value = longitude;
             });
 	}
         }
@@ -25,11 +25,6 @@
     </h:head>
     <h:body>
        
-	<div id="coords">
-		<h1>Les coordonnées</h1>
-		<button onclick="getCoordPosition();">Obtenir les coordonnées</button>
-		<div id="geolocation"></div>
-        </div>	
         <h:form class="register" id="agentForm">
                     
                     
@@ -57,9 +52,9 @@
                                 </tr>
                                     </table>
                         
-                        <h:inputText class="register-input" id="lat" p:placeholder="Longtitude" value="#{ABean.lat}"/>
+                        <h:inputText class="register-input" id="a" p:placeholder="Longtitude" value="#{ABean.lat}"/>
                         
-                        <h:inputText class="register-input" id="lon" p:placeholder="Latitude" value="#{ABean.lon}"/>
+                        <h:inputText class="register-input" id="b" p:placeholder="Latitude" value="#{ABean.lon}"/>
                         
                         <h:inputText class="register-input" p:placeholder="Description Offre" value="#{ABean.offre}"/>
                         

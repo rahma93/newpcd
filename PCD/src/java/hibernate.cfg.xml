@@ -6,12 +6,9 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/PCD?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="model/Profil.hbm.xml"/>
-    <mapping resource="model/Offre.hbm.xml"/>
     <mapping resource="model/Commentaire.hbm.xml"/>
     <mapping resource="model/Visiteur.hbm.xml"/>
     <mapping resource="model/Note.hbm.xml"/>
-    <mapping resource="model/Photo.hbm.xml"/>
     <mapping resource="model/Membre.hbm.xml"/>
     <mapping resource="model/Article.hbm.xml"/>
     <mapping resource="model/MembreDonnerNote.hbm.xml"/>

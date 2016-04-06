@@ -3,7 +3,6 @@
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="PCD"/>
   <table-filter match-name="membre_donner_note"/>
-  <table-filter match-name="photo"/>
   <table-filter match-name="administrateur"/>
   <table-filter match-name="visiteur"/>
   <table-filter match-name="admi_avoir_stat"/>
@@ -11,8 +10,6 @@
   <table-filter match-name="statistique"/>
   <table-filter match-name="article"/>
   <table-filter match-name="agent_medical"/>
-  <table-filter match-name="profil"/>
-  <table-filter match-name="offre"/>
   <table-filter match-name="forum"/>
   <table-filter match-name="note"/>
   <table-filter match-name="membre"/>

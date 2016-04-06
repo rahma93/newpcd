@@ -40,19 +40,11 @@ public class AgentMedicalBean {
      private double lon;
      private double lat;
      private String type;
+     private String offre;
+     private String urlphoto;
      
      private Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
      private Set<Article> articles = new HashSet<Article>(0);
-     private Set<Profil> profils = new HashSet<Profil>(0);
-     
-     private Set<Photo> photos = new HashSet<Photo>(0);
-     private Set<Offre> offres = new HashSet<Offre>(0);
-     
-     private String phototitre;
-     private String photochemin;
-     
-     private String offreAgent;
-     private List<Offre> AOffres;
      
      
     public String saveagent(){
@@ -62,29 +54,18 @@ public class AgentMedicalBean {
                 
                 Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
                 Set<Article> articles = new HashSet<Article>(0);
-                Set<Profil> profils = new HashSet<Profil>(0);
                 
-                Set<Photo> photos = new HashSet<Photo>(0);
-                Set<Offre> offres = new HashSet<Offre>(0);
                 Set<MembreDonnerNote> membreDonnerNotes = new HashSet<MembreDonnerNote>(0);
-		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
+		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,offre,urlphoto,commentaires,articles);
 		
                 session.save(agent);
                 
                 Membre membre=new Membre(nomagent, prenomagent, nomagent, emailagent, passwordagent, null, membreDonnerNotes, commentaires);
                 session.save(membre);
-                Profil profil=new Profil(agent,nomagent,photos,offres);
-		session.save(profil);
                 
-                Offre offre=new Offre(profil,offreAgent);
-                session.save(offre);
-                
-                Photo photo=new Photo(profil,phototitre,photochemin);
-                session.save(photo);
-		//produitDao.save(produit);
                 session.getTransaction().commit();
 		session.close();
-		//System.out.println("User successfully saved.");
+		
 		return "output";
                             }
     public String modifagent(){
@@ -109,8 +90,7 @@ public class AgentMedicalBean {
                 
                 query.setParameter("e",lon );
                 query.setParameter("g",lat);
-                query3.setParameter("f",offreAgent );
-                query4.setParameter("k",photochemin);
+                
                 query.setParameter("b", email);
                 query.executeUpdate();
                
@@ -127,28 +107,15 @@ public class AgentMedicalBean {
                 
                 Set<Commentaire> commentaires = new HashSet<Commentaire>(0);
                 Set<Article> articles = new HashSet<Article>(0);
-                Set<Profil> profils = new HashSet<Profil>(0);
                 
-                Set<Photo> photos = new HashSet<Photo>(0);
-                Set<Offre> offres = new HashSet<Offre>(0);
-                
-		AgentMedical agent = new AgentMedical("non disponible",nomagent,prenomagent,"non disponible",nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
+                AgentMedical agent = new AgentMedical(null,nomagent,prenomagent,null,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,null,null,commentaires,articles);
 		
                 session.save(agent);
                 
-                Profil profil=new Profil(agent,nomagent,photos,offres);
-		session.save(profil);
-                
-                Offre offre=new Offre(profil,"non disponible");
-                session.save(offre);
-                
-                Photo photo=new Photo(profil,"non disponible","non disponible");
-                session.save(photo);
-		//produitDao.save(produit);
                 session.getTransaction().commit();
 		session.close();
-		//System.out.println("User successfully saved.");
-		return "output";
+		
+		return "propsucces";
                             }
     
      
@@ -166,9 +133,7 @@ public class AgentMedicalBean {
     public void afficheoffres(){
         Session session = HibernateUtil.getSessionFactory().openSession();
        session.beginTransaction();
-       AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils); 
-
-       AOffres = session.createQuery("from Offre").list();
+       
        AgentMedicals = session.createQuery("from AgentMedical").list();
        /*List<String> AOffres;
        for(int k=0  ;k<AgentMedicals.size();k++)
@@ -182,7 +147,7 @@ public class AgentMedicalBean {
     
     public String verifyUser(){
 		AgentMedicalDAO agentDAO = new AgentMedicalDAO();
-		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,commentaires,articles, profils);
+		AgentMedical agent = new AgentMedical(passwordagent,nomagent,prenomagent,emailagent,nomvilleagent,nompadresseagent,codepostalagent,telagent,typeagent,lon,lat,offre,urlphoto,commentaires,articles);
 		Integer response = agentDAO.verify(emailagent,passwordagent);
 		if (response==2) {
                                     FacesContext context = FacesContext.getCurrentInstance();
@@ -221,13 +186,7 @@ public class AgentMedicalBean {
         this.AgentMedicals = AgentMedicals;
     }
     
-    public List<Offre> getAOffres() {
-        return AOffres;
-    }
-
-    public void setAOffres(List<Offre> AOffres) {
-        this.AOffres = AOffres;
-    }
+    
 
     
 
@@ -349,55 +308,27 @@ public class AgentMedicalBean {
         this.articles = articles;
     }
 
-    public Set<Profil> getProfils() {
-        return profils;
+    public String getOffre() {
+        return offre;
     }
 
-    public void setProfils(Set<Profil> profils) {
-        this.profils = profils;
+    public void setOffre(String offre) {
+        this.offre = offre;
     }
 
-    public Set<Photo> getPhotos() {
-        return photos;
+    public String getUrlphoto() {
+        return urlphoto;
     }
 
-    public void setPhotos(Set<Photo> photos) {
-        this.photos = photos;
+    public void setUrlphoto(String urlphoto) {
+        this.urlphoto = urlphoto;
     }
 
-    public String getPhototitre() {
-        return phototitre;
-    }
+    
 
-    public void setPhototitre(String phototitre) {
-        this.phototitre = phototitre;
-    }
-
-    public String getPhotochemin() {
-        return photochemin;
-    }
-
-    public String getOffreAgent() {
-        return offreAgent;
-    }
-
-    public void setOffreAgent(String offreAgent) {
-        this.offreAgent = offreAgent;
-    }
-
-    public void setPhotochemin(String photochemin) {
-        this.photochemin = photochemin;
-    }
-
-
-    public void setOffres(Set<Offre> offres) {
-        this.offres = offres;
-    }
      
 
     public AgentMedicalBean() {
     }
     
-    
-    
-}
+    }

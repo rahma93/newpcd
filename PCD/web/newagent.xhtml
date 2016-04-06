@@ -7,10 +7,31 @@
     <h:head>
         <title>x</title>
         <link rel="stylesheet" type="text/css" href="layout.css"/>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+        window.onload = function getCoordPosition(){
+	if(navigator.geolocation){
+	    navigator.geolocation.getCurrentPosition(function(position){
+	        var latitude = position.coords.latitude;
+	        var longitude = position.coords.longitude;
+	        var altitude = position.coords.altitude;
+	        document.getElementById('geolocation').innerHTML = 'latitude : ' + latitude + '<br />' + 'longitude : ' + longitude + '<br />' + 'altitude : ' + altitude + '<br />';
+                document.getElementById('lat').value = latitude;
+                document.getElementById('lon').value = longitude;
+            });
+	}
+        }
+        </script>
     </h:head>
     <h:body>
        
-		<h:form class="register" id="agentForm">
+	<div id="coords">
+		<h1>Les coordonnées</h1>
+		<button onclick="getCoordPosition();">Obtenir les coordonnées</button>
+		<div id="geolocation"></div>
+        </div>	
+        <h:form class="register" id="agentForm">
+                    
                     
                          <h1 class="register-title"> Inscription </h1>
                         
@@ -36,15 +57,15 @@
                                 </tr>
                                     </table>
                         
-                        <h:inputText class="register-input" p:placeholder="Longtitude" value="#{ABean.lon}"/>
+                        <h:inputText class="register-input" id="lat" p:placeholder="Longtitude" value="#{ABean.lat}"/>
                         
-                        <h:inputText class="register-input" p:placeholder="Latitude" value="#{ABean.lat}"/>
+                        <h:inputText class="register-input" id="lon" p:placeholder="Latitude" value="#{ABean.lon}"/>
                         
-                        <h:inputText class="register-input" p:placeholder="Description Offre" value="#{ABean.offreAgent}"/>
+                        <h:inputText class="register-input" p:placeholder="Description Offre" value="#{ABean.offre}"/>
                         
-                        <h:inputText class="register-input" p:placeholder="Nom Photo" value="#{ABean.phototitre}" />
                         
-                        <h:inputText class="register-input" p:placeholder="URL photo" value="#{ABean.photochemin}"/>
+                        
+                        <h:inputText class="register-input" p:placeholder="URL photo" value="#{ABean.urlphoto}"/>
                         
 			
                     <h:commandButton class="register-button" value="Submit" action="#{ABean.saveagent()}"/>

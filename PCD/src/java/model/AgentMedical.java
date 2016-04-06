@@ -1,5 +1,5 @@
 package model;
-// Generated 5 avr. 2016 13:48:20 by Hibernate Tools 4.3.1
+// Generated 6 avr. 2016 16:53:06 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -21,16 +21,17 @@ public class AgentMedical  implements java.io.Serializable {
      private Integer codepostalagent;
      private String telagent;
      private Integer typeagent;
-     private Double lon;
      private Double lat;
+     private Double lon;
+     private String offre;
+     private String urlphoto;
      private Set commentaires = new HashSet(0);
      private Set articles = new HashSet(0);
-     private Set profils = new HashSet(0);
 
     public AgentMedical() {
     }
 
-    public AgentMedical(String passwordagent, String nomagent, String prenomagent, String emailagent, String nomvilleagent, String nompadresseagent, Integer codepostalagent, String telagent, Integer typeagent, Double lon, Double lat, Set commentaires, Set articles, Set profils) {
+    public AgentMedical(String passwordagent, String nomagent, String prenomagent, String emailagent, String nomvilleagent, String nompadresseagent, Integer codepostalagent, String telagent, Integer typeagent, Double lat, Double lon, String offre, String urlphoto, Set commentaires, Set articles) {
        this.passwordagent = passwordagent;
        this.nomagent = nomagent;
        this.prenomagent = prenomagent;
@@ -40,11 +41,12 @@ public class AgentMedical  implements java.io.Serializable {
        this.codepostalagent = codepostalagent;
        this.telagent = telagent;
        this.typeagent = typeagent;
-       this.lon = lon;
        this.lat = lat;
+       this.lon = lon;
+       this.offre = offre;
+       this.urlphoto = urlphoto;
        this.commentaires = commentaires;
        this.articles = articles;
-       this.profils = profils;
     }
    
     public Integer getIdagent() {
@@ -117,6 +119,13 @@ public class AgentMedical  implements java.io.Serializable {
     public void setTypeagent(Integer typeagent) {
         this.typeagent = typeagent;
     }
+    public Double getLat() {
+        return this.lat;
+    }
+    
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
     public Double getLon() {
         return this.lon;
     }
@@ -124,12 +133,19 @@ public class AgentMedical  implements java.io.Serializable {
     public void setLon(Double lon) {
         this.lon = lon;
     }
-    public Double getLat() {
-        return this.lat;
+    public String getOffre() {
+        return this.offre;
     }
     
-    public void setLat(Double lat) {
-        this.lat = lat;
+    public void setOffre(String offre) {
+        this.offre = offre;
+    }
+    public String getUrlphoto() {
+        return this.urlphoto;
+    }
+    
+    public void setUrlphoto(String urlphoto) {
+        this.urlphoto = urlphoto;
     }
     public Set getCommentaires() {
         return this.commentaires;
@@ -144,13 +160,6 @@ public class AgentMedical  implements java.io.Serializable {
     
     public void setArticles(Set articles) {
         this.articles = articles;
-    }
-    public Set getProfils() {
-        return this.profils;
-    }
-    
-    public void setProfils(Set profils) {
-        this.profils = profils;
     }
 
 

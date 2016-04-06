@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 5 avr. 2016 13:48:20 by Hibernate Tools 4.3.1 -->
+<!-- Generated 6 avr. 2016 16:53:08 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="model.AgentMedical" table="agent_medical" catalog="pcd" optimistic-lock="version">
         <id name="idagent" type="java.lang.Integer">
@@ -35,11 +35,17 @@
         <property name="typeagent" type="java.lang.Integer">
             <column name="typeagent" />
         </property>
+        <property name="lat" type="java.lang.Double">
+            <column name="lat" precision="22" scale="0" />
+        </property>
         <property name="lon" type="java.lang.Double">
             <column name="lon" precision="22" scale="0" />
         </property>
-        <property name="lat" type="java.lang.Double">
-            <column name="lat" precision="22" scale="0" />
+        <property name="offre" type="string">
+            <column name="offre" />
+        </property>
+        <property name="urlphoto" type="string">
+            <column name="urlphoto" />
         </property>
         <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
             <key>
@@ -52,12 +58,6 @@
                 <column name="idagent" />
             </key>
             <one-to-many class="model.Article" />
-        </set>
-        <set name="profils" table="profil" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="idagent" />
-            </key>
-            <one-to-many class="model.Profil" />
         </set>
     </class>
 </hibernate-mapping>

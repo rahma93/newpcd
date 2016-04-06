@@ -11,7 +11,7 @@
     <body>
     
         <div id="indexLeftColumn">
-            <iframe height="800" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            <iframe height="800" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
             </iframe>
             
             

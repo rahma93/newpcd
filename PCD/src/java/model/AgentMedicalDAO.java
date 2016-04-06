@@ -24,7 +24,7 @@ public class AgentMedicalDAO {
 	}
         
     public Integer verify (String email,String pswd){
-		String hql = "select nomagent from AgentMedical where emailagent='" + email + "' and passwordagent='" + pswd+"'";
+		String hql = "select nommembre from Membre where emailmembre='" + email + "' and passwordmembre='" + pswd+"'";
 		Query query = session.createQuery(hql);
 		List<Integer> results = query.list();
 		Integer existence = 0;

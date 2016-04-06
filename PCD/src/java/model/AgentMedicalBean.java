@@ -68,6 +68,11 @@ public class AgentMedicalBean {
 		
 		return "output";
                             }
+    
+    
+ 
+    
+    
     public String modifagent(){
             Session session = HibernateUtil.getSessionFactory().openSession();
                 session.beginTransaction();
@@ -161,7 +166,7 @@ public class AgentMedicalBean {
                             return "login";
                                 
                         }
-                else return "welcome";
+                else return "login";
                 }
     
     public String logout(){

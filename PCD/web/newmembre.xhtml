@@ -3,6 +3,7 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
+          
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <title>x</title>
@@ -16,16 +17,16 @@
                          <a href="chooseinscrit.xhtml">  <h4>Retour en arrière</h4> </a>
                          <h1 class="register-title"> Inscription </h1>
                         
-                         <h:inputText class="register-input" p:placeholder="NOM" value="#{MBean.nommembre}" />
-                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{MBean.prenommembre}"/>
-                         <h:inputText class="register-input" p:placeholder="pseudo" value="#{MBean.pseudomembre}"/>
-                         <h:inputSecret class="register-input" p:placeholder="Mot de passe" value="#{MBean.passwordmembre}" />
-                         <h:inputText class="register-input" p:placeholder="Email" value="#{MBean.emailmembre}"/>
-                         <h:inputText class="register-input" p:placeholder="Téléphone" value="#{MBean.numtelmembre}"/>
+                         <h:inputText class="register-input" p:placeholder="NOM" value="#{MBean.nommembre}" required="true"/>
+                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{MBean.prenommembre}" required="true"/>
+                         <h:inputText class="register-input" p:placeholder="pseudo" value="#{MBean.pseudomembre}" required="true"/>
+                         <h:inputSecret class="register-input" p:placeholder="Mot de passe" value="#{MBean.passwordmembre}" required="true"/>
+                         <h:inputText class="register-input" p:placeholder="Email" value="#{MBean.emailmembre}" required="true"/>
+                         <h:inputText class="register-input" p:placeholder="Téléphone" value="#{MBean.numtelmembre}" required="true"/>
                         
                         
-                        
-                    <h:commandButton class="register-button" value="Submit" action="#{MBean.savemembre}"/>
+                         <h:commandButton class="register-button" value="Submit" action="#{MBean.savemembre}"/>   
+                     
                         
 		</h:form>
        

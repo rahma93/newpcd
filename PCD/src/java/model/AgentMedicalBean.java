@@ -5,17 +5,24 @@
  */
 package model;
 import static com.mchange.v2.c3p0.impl.C3P0Defaults.password;
+import com.sun.istack.internal.NotNull;
+import static java.rmi.server.LogStream.log;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import org.apache.catalina.User;
 import static org.apache.tomcat.jni.User.username;
+import static org.eclipse.persistence.expressions.ExpressionOperator.NotNull;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import javax.faces.validator.Validator;
+import javax.faces.validator.ValidatorException;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -166,6 +173,19 @@ public class AgentMedicalBean {
                         }
                 else return "login";
                 }
+    
+    
+    public void emailvalidator(FacesContext context, UIComponent component, Object value) throws ValidatorException {
+  String selectedRadio = (String) value;
+  String msg = "no email set";
+  //String clubNameFromComp = (String) clubNameBind.getSubmittedValue();
+  //log("\n\t ##clubName=" + clubNameFromComp + ",##selectedRadio=" + selectedRadio + "##\n\t");
+  //if ((clubNameFromComp == null || "".equalsIgnoreCase(clubNameFromComp)) && "Y".equalsIgnoreCase(selectedRadio)) {
+    throw new ValidatorException(new FacesMessage(FacesMessage.SEVERITY_ERROR, msg, msg));
+    //}
+}
+    
+    
     
     public String logout(){
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();

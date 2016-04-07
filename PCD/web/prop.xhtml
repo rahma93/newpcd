@@ -29,13 +29,13 @@
                  
                         
                         <h1 class="register-title"> Proposition d'un centre médical </h1> 
-                        <h:inputText class="register-input" p:placeholder="NOM" value="#{ABean.nomagent}" />
-                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{ABean.prenomagent}"/>
+                        <h:inputText class="register-input" p:placeholder="NOM" value="#{ABean.nomagent}" required="true" />
+                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{ABean.prenomagent}" required="true"/>
                         
-                        <h:inputText class="register-input" p:placeholder="Ville" value="#{ABean.nomvilleagent}"/>
-                        <h:inputText class="register-input" p:placeholder="Adresse" value="#{ABean.nompadresseagent}"/>
-                        <h:inputText class="register-input" p:placeholder="Code Postal" value="#{ABean.codepostalagent}"/>
-                        <h:inputText class="register-input" p:placeholder="Téléphone" value="#{ABean.telagent}"/>
+                        <h:inputText class="register-input" p:placeholder="Ville" value="#{ABean.nomvilleagent}" required="true"/>
+                        <h:inputText class="register-input" p:placeholder="Adresse" value="#{ABean.nompadresseagent}" required="true"/>
+                        <h:inputText class="register-input" p:placeholder="Code Postal" value="#{ABean.codepostalagent}" required="true"/>
+                        <h:inputText class="register-input" p:placeholder="Téléphone" value="#{ABean.telagent}" required="true"/>
                              
                         <table>
                             <tr>
@@ -51,9 +51,9 @@
                                 </tr>
                                     </table>
                         
-                        <h:inputText class="register-input" p:placeholder="Longtitude" value="#{ABean.lon}"/>
+                        <h:inputText class="register-input" p:placeholder="Longtitude" value="#{ABean.lon}" required="true"/>
                         
-                        <h:inputText class="register-input" p:placeholder="Latitude" value="#{ABean.lat}"/>
+                        <h:inputText class="register-input" p:placeholder="Latitude" value="#{ABean.lat}" required="true"/>
                         
                         
                     <h:commandButton class="register-button" value="Submit" action="#{ABean.propagent}"/>

@@ -1,0 +1,48 @@
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>x</title>
+        <link rel="stylesheet" type="text/css" href="layout.css"/>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+        window.onload = function getCoordPosition(){
+	if(navigator.geolocation){
+	    navigator.geolocation.getCurrentPosition(function(position){
+	        var latitude = position.coords.latitude;
+	        var longitude = position.coords.longitude;
+	        var altitude = position.coords.altitude;
+	        //document.getElementById('geolocation').innerHTML = 'latitude : ' + latitude + '<br />' + 'longitude : ' + longitude + '<br />' + 'altitude : ' + altitude + '<br />';
+                document.getElementById('agentForm:a').value = latitude;
+                document.getElementById('agentForm:b').value = longitude;
+            });
+	}
+        }
+        </script>
+    </h:head>
+    <h:body>
+                <h:panelGroup rendered="#{empty user}">
+		<h:form class="register" id="agentForm">
+                 
+                        
+                        <h1 class="register-title"> Proposition d'un centre médical </h1> 
+                        <h:inputText class="register-input" p:placeholder="NOM" value="#{EBean.nomagent}" required="true" />
+                         <h:inputText class="register-input" p:placeholder="PRENOM" value="#{EBean.prenomagent}" required="true"/>
+                        
+                         <h:inputText class="register-input" p:placeholder="email" value="#{EBean.emailagent}" required="true"/>
+                      
+                        
+                        
+                    <h:commandButton class="register-button" value="Submit" action="#{EBean.send}"/>
+                        
+		</h:form>
+       
+                </h:panelGroup>
+        
+   </h:body>
+    
+        
+</html>

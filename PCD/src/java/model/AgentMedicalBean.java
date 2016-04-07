@@ -25,6 +25,7 @@ import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 import org.springframework.web.servlet.ModelAndView;
 
+
 /**
  *
  * @author Youssef
@@ -191,6 +192,8 @@ public class AgentMedicalBean {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
         return "login";
         }
+    
+    
     
     
      public Integer getIdagent() {

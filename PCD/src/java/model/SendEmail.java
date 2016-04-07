@@ -59,7 +59,7 @@ public class SendEmail {
 			message.setFrom(new InternetAddress("pcd.e.health@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse(emailagent));
-			message.setSubject("Votre mot de passe oubliée");
+			message.setSubject("Votre mot de passe oubliée sur le forum e-health");
 			message.setText("Bonjour "+nomagent+" "+prenomagent+" Votre mot de passe oubliée est "+response);
 
 			Transport.send(message);

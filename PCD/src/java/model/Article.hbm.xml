@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 6 avr. 2016 16:53:08 by Hibernate Tools 4.3.1 -->
+<!-- Generated 12 avr. 2016 12:38:54 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="model.Article" table="article" catalog="pcd" optimistic-lock="version">
         <id name="idarticle" type="java.lang.Integer">
@@ -15,7 +15,10 @@
             <column name="idforum" />
         </many-to-one>
         <property name="articlecontent" type="string">
-            <column name="articlecontent" />
+            <column name="articlecontent" length="65535" />
+        </property>
+        <property name="date1" type="timestamp">
+            <column name="date1" length="19" />
         </property>
         <set name="commentaires" table="commentaire" inverse="true" lazy="true" fetch="select">
             <key>

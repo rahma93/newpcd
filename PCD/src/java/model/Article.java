@@ -1,7 +1,8 @@
 package model;
-// Generated 6 avr. 2016 16:53:06 by Hibernate Tools 4.3.1
+// Generated 12 avr. 2016 12:38:52 by Hibernate Tools 4.3.1
 
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,15 +16,17 @@ public class Article  implements java.io.Serializable {
      private AgentMedical agentMedical;
      private Forum forum;
      private String articlecontent;
+     private Date date1;
      private Set commentaires = new HashSet(0);
 
     public Article() {
     }
 
-    public Article(AgentMedical agentMedical, Forum forum, String articlecontent, Set commentaires) {
+    public Article(AgentMedical agentMedical, Forum forum, String articlecontent, Date date1, Set commentaires) {
        this.agentMedical = agentMedical;
        this.forum = forum;
        this.articlecontent = articlecontent;
+       this.date1 = date1;
        this.commentaires = commentaires;
     }
    
@@ -54,6 +57,13 @@ public class Article  implements java.io.Serializable {
     
     public void setArticlecontent(String articlecontent) {
         this.articlecontent = articlecontent;
+    }
+    public Date getDate1() {
+        return this.date1;
+    }
+    
+    public void setDate1(Date date1) {
+        this.date1 = date1;
     }
     public Set getCommentaires() {
         return this.commentaires;

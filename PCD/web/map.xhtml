@@ -38,24 +38,27 @@ if (navigator.geolocation) {
     }
 </script>
     </h:head>
-    <h:body>
-        <p:gmap widgetVar="w_gmap" type="terrain" center="34.7478469,10.7661630" zoom="12"  style="width:600px;height:400px" model="#{markersViewBean.simpleModel}">
-         <p:ajax event="overlaySelect" listener="#{markerViewBean.onMarkerSelect}" />
+     <h:body>
+       <h:form>  
+           <p:gmap widgetVar="w_gmap" type="terrain" center="34.7478469,10.7661630" zoom="13" model="#{markersViewBean.advancedModel}"  style="width:600px;height:400px" >
+ 
+        <p:ajax event="overlaySelect" listener="#{markersViewBean.onMarkerSelect}" />
  
         <p:gmapInfoWindow id="infoWindow">
             <p:outputPanel style="text-align: center; display: block; margin: auto">
  
-                    <p:graphicImage name="ressources\#{markerViewBean.marker.data}" height="150" />
+                <p:graphicImage  name="#{markersViewBean.marker.data}" height="150" />
                     <br />
-                    <h:outputText value="#{markerViewBean.marker.title}" />
+                    <h:outputText value="#{markersViewBean.marker.title}" />
  
             </p:outputPanel>
-        </p:gmapInfoWindow>   
-        </p:gmap>
-         <p:outputPanel style="display:none">
-        <p:graphicImage name="ressources\hopital.png" />
-        </p:outputPanel>
-    
+        </p:gmapInfoWindow>
+    </p:gmap>
+ 
+    <p:outputPanel style="display:none">
+        <p:graphicImage  name="pharmacie.png" />
+    </p:outputPanel>
+</h:form>
     </h:body>
 </html>
 

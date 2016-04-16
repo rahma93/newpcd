@@ -1,1 +1,11 @@
 # PCD
+Solution de géolocalisation des organismes médicaux
+
+Description du sujet
+
+L’un des facteurs essentiels derrière l’idée de notre projet est le manque d’information chez les patients à propos de l’emplacement des hôpitaux, les pharmacies et les autres services médicaux. Les patients veulent connaitre les journées de consultations des médecins, leurs qualités de services en plus les tarifs, mais ceci reste indisponible encore en Tunisie.
+Dès qu’on pose ce problème, il faut parler des pharmacies de nuit/jour/garde, les médecins généralistes/spécialistes, les dentistes généralistes/chirurgiens etc…, leurs horaires de travail et leurs adresses c’est le pire problème dont souffre tout le monde.
+C’est pour cela des recherches faites au Canada ont mis fin aux souffrances de ces citoyens par la mise en œuvre de services variés tel que le diagnostic et le traitement adéquat tous basés sur le Web sans même se déplacer.      
+Notre solution espère apporter une innovation dans le domaine des services mobile, et ce en proposant un projet qui comporte deux volets : 
+•	Le premier consiste en la réalisation d’une application mobile qui vise comme clientèle toute personne possédant un Smartphone et souhaitant savoir les services médicaux ouverts qui se trouvent dans une position géographique proche à la sienne, en fonction des distances, des horaires d'ouverture et des jours fériés nationaux. L’utilisateur pourrait avoir visualisé une fiche complète pour chaque organisme médical qui permet non seulement de consulter leurs infos détaillées (nom, adresses, numéro de téléphone…) mais aussi d’appeler ce dernier directement depuis l’application. Tout comme sur la carte, les résultats sont répertoriés sous forme d’une liste en fonction de l’ensemble des régions.
+•	Le second composant de ce projet s’adresse principalement à l’administrateur ainsi qu’aux agents médicaux en leur proposant un accès au portail médical afin de configurer leurs espaces après avoir été inscrit. Il s’agit de la conception et du développement d’une application web qui leur permet de gérer leurs données ainsi que la position géographique. L’application comporte également un service de recherche géo-localisé pour les internautes.

@@ -12,26 +12,36 @@ and open the template in the editor.
 body {
     font-family: Arial, Helvetica, sans-serif;
     width: 1400px;
+    height: 850px;
     text-align: center;
-    margin: 20px auto;
-    float: left;
+    margin:0;
+   alignment-adjust: middle;
+    
     
 }
 form{
     float: left;
 }
 #header {
-    height: 300px;
-    background-image: url("http://i.imgur.com/C3pEwzP.jpg");
+        width: 1400px;
+
+    height: 250px;
+    background-color: #6699ff;
     background-repeat: no-repeat;
-  
-    
+background-size: 50%;
+background-position-x: 300px;
+background-position-y: -40px;
+      background-image:url("images/EH.png");
+
 }
 
 #footer {
     height: 150px;
+    width: 1400px;
     background-image: url("http://i.imgur.com/C3pEwzP.jpg");
     background-repeat: no-repeat;
+background-size: 100%;
+color:blue;
     clear: left;
     
 }
@@ -116,7 +126,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -127,7 +137,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
+  line-height: 0;
 }
 
 ol, ul {

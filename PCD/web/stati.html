@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+
+    var colors = Highcharts.getOptions().colors,
+        categories =  ['Pharmacies', 'Médecins', 'Dentistes', 'Cliniques', 'Hopitaux'],
+        data = [{
+            y: 33.33,
+            color: colors[0],
+            drilldown: {
+                name: 'Pharmacies gouvernera',
+                categories: ['Ariana', 'Tunis', 'Ben arrous', 'La manouba'],
+                data: [12.2, 10.0 , 5.0, 6.13],
+                color: colors[0]
+            }
+        }, {
+            y: 20.0,
+            color: colors[1],
+            drilldown: {
+                name: 'Médecins gouvernera',
+                categories: ['Ariana', 'Tunis', 'Ben arrous', 'La manouba'],
+                data: [5.2, 6.3, 6.0, 2.5],
+                color: colors[1]
+            }
+        }, {
+            y: 24.7,
+            color: colors[2],
+            drilldown: {
+                name: 'Dentistes gouvernera',
+                categories: ['Ariana', 'Tunis', 'Ben arrous', 'La manouba'],
+                data: [5.6, 7.3, 4.9, 6.9],
+                color: colors[2]
+            }
+        }, {
+            y: 11.97,
+            color: colors[3],
+            drilldown: {
+                name: 'Cliniques gouvernera',
+                categories: ['Ariana', 'Tunis', 'Ben arrous', 'La manouba'],
+                data: [1.7, 4.6, 3.0 ,2.67],
+                color: colors[3]
+            }
+        }, {
+            y: 10,
+            color: colors[4],
+            drilldown: {
+                name: 'Hopitaux gouvernera',
+                categories: ['Ariana', 'Tunis', 'Ben arrous', 'La manouba'],
+                data: [2.5, 3, 2.5 ,2],
+                color: colors[4]
+            }
+        
+        }],
+        browserData = [],
+        versionsData = [],
+        i,
+        j,
+        dataLen = data.length,
+        drillDataLen,
+        brightness;
+
+
+    // Build the data arrays
+    for (i = 0; i < dataLen; i += 1) {
+
+        // add browser data
+        browserData.push({
+            name: categories[i],
+            y: data[i].y,
+            color: data[i].color
+        });
+
+        // add version data
+        drillDataLen = data[i].drilldown.data.length;
+        for (j = 0; j < drillDataLen; j += 1) {
+            brightness = 0.2 - (j / drillDataLen) / 5;
+            versionsData.push({
+                name: data[i].drilldown.categories[j],
+                y: data[i].drilldown.data[j],
+                color: Highcharts.Color(data[i].color).brighten(brightness).get()
+            });
+        }
+    }
+
+    // Create the chart
+    $('#container').highcharts({
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Statistiques'
+        },
+        subtitle: {
+            text: 'Selon les gouvernera'
+        },
+        yAxis: {
+            title: {
+                text: 'répartitions'
+            }
+        },
+        plotOptions: {
+            pie: {
+                shadow: false,
+                center: ['50%', '50%']
+            }
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        series: [{
+            name: 'Spécialités',
+            data: browserData,
+            size: '60%',
+            dataLabels: {
+                formatter: function () {
+                    return this.y > 5 ? this.point.name : null;
+                },
+                color: '#ffffff',
+                distance: -30
+            }
+        }, {
+            name: 'Gouvernera',
+            data: versionsData,
+            size: '80%',
+            innerSize: '60%',
+            dataLabels: {
+                formatter: function () {
+                    // display only if larger than 1
+                    return this.y > 1 ? '<b>' + this.point.name + ':</b> ' + this.y + '%' : null;
+                }
+            }
+        }]
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="width: 600px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>

@@ -59,10 +59,13 @@
             <url-pattern>/WEB-INF/jsp/afficheroffres.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/index.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/comment.jsp</url-pattern>
+             <url-pattern>/WEB-INF/jsp/map.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/recherchecentre.jsp</url-pattern>
+            <url-pattern>/WEB-INF/jsp/statistique.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/lireblog.jsp</url-pattern>
             <include-prelude>/WEB-INF/jsp/view/header.jsp</include-prelude>
-            <include-coda>/WEB-INF/jsp/view/footer.jsp</include-coda>
+            <include-coda>/WEB-INF/jsp/view/footer.jsp</include-coda>  
+
         </jsp-property-group>
     </jsp-config>
 </web-app>

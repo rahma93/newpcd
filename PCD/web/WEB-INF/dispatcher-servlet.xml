@@ -17,6 +17,8 @@
     <bean class="controller.PropcentreController" id="PropcentreKey"/> 
     <bean class="controller.RegisterController" id="RegisterKey"/> 
     <bean class="controller.PswdforgottenController" id="PswdforgottenKey"/> 
+    <bean class="controller.MapController" id="MapKey"/> 
+    <bean class="controller.StatController" id="StatKey"/> 
 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
@@ -34,6 +36,9 @@
                 <prop key="propcentre.htm">PropcentreKey</prop>
                 <prop key="register.htm">RegisterKey</prop>
                 <prop key="pswdforgotten.htm">PswdforgottenKey</prop>
+               <prop key="map.htm">MapKey</prop>
+               <prop key="statistique.htm">StatKey</prop>
+
             </props>
         </property>
     </bean>

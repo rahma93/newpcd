@@ -9,13 +9,12 @@
         <link rel="stylesheet" type="text/css" href="layout.css">
     </head>
 <div class="wrapper">
-	<img src="images/pexels-photo.png" width="2000" height="400" alt="" />
+	<img src="images/pexels-photo.png" width="1400" height="300" alt="" />
 	<div id="welcome" class="container">
-    	
-<div class="title">
-	  <h2>Welcome to our website</h2>
-		</div>
+   
 		<p>This is <strong>E-health</strong>
+                    	  <h2>Welcome to our website</h2>
+        
 	</div>
 	
     

@@ -9,41 +9,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-            <title>Welcome to E-Health</title>
+  
+<title>E-health</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-    
-        <link rel="stylesheet" type="text/css" href="layout.css">
+
     </head>
     
     <body> 
-        <div id="header-wrapper">
-            <div id="header" class="content">
-                <div id="logo">
-                      
-		
-		</div>
-                    
-	
-            <div id="menu" class="container">
-			<ul>
-				<li class="content">
-				<a onclick="location.href='index.htm'" accesskey="2">Home</a></li>
-				<!--<li class="content"><a onclick="location.href='comment.htm'" accesskey="3" title="">Comment ça marche</a></li>-->
-				<li class="content"><a onclick="location.href='afficheroffres.htm'" accesskey="4" title="">Offres</a></li>
-                                <li class="content"><a onclick="location.href='propcentre.htm'" accesskey="4" title="">Proposer votre centre</a></li>
-				<li class="content"><a onclick="location.href='lireblog.htm'" accesskey="4" title="">Participer aux forums</a></li>
-                                <li class="content"><a onclick="location.href='ajoutcentre.htm'" accesskey="4" title="">Chercher un centre médical </a><li>
-                                                        <li class="content"><a onclick="location.href='statistique.htm'" accesskey="4" title="">Afficher les statistiques</a><li>
-
-                        </ul>
-		</div>
-	</div>
+        <div class="main">
+  <div class="main_resize">
+    <div class="header">
+      <div class="menu_nav">
+        <ul>
+          <li class="active"><a href="index.html">Page d'accueil</a></li>
+              <li><a href="support.html">Notre actualité</a></li>
+          <li><a href="about.html">A propos de nous</a></li>
+          <li><a href="lireblog.htm">Visiter notre blog</a></li>
+          <li><a href="contact.html">Nos contacts</a></li>
+        </ul>
+              <div class="hbg"> <img src="images/im1.jpg" width="600" height="289" alt="" />
+        <div class="logo">
+   <img src="images/EH.png" width="300" height="289" alt="" />
+       
+      </div>
+    </div>
 
           <!--  <button class="button" onclick="location.href='index.htm'"><span>HOME </span></button>-->
                     

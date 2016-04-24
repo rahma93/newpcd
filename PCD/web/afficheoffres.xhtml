@@ -16,9 +16,9 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="layout.css"/>
     </head>
     <body>
-        <div style="overflow-x:auto;">
+        <div>
         
-        <h:dataTable value="#{ABean.agentMedicals}" var="agents" border="5">
+        <h:dataTable value="#{ABean.agentMedicals}" var="agents" border="10">
             <h:column>
                 <f:facet name="header">NOM</f:facet>
                 #{agents.nomagent}

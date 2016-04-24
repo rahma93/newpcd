@@ -14,13 +14,9 @@
 
     <body>
     
-        <div id="indexLeftColumn">
-            <iframe height="800" width="400" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
-            </iframe>
-        </div>
-
-        <div id="indexRightColumn">
-            <iframe height="800" width="1000" src="afficheoffres.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
+      
+        <div>
+            <iframe height="800" width="700" src="afficheoffres.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
             </iframe>
         </div>
    

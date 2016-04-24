@@ -29,11 +29,11 @@
     <div class="header">
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="index.html">Page d'accueil</a></li>
-              <li><a href="support.html">Notre actualité</a></li>
-          <li><a href="about.html">A propos de nous</a></li>
-          <li><a href="lireblog.htm">Visiter notre blog</a></li>
-          <li><a href="contact.html">Nos contacts</a></li>
+          <li class="active"><a href="index.htm">Page d'accueil</a></li>
+              <li><a href="map.htm">Localisez vous</a></li>
+          <li><a href="afficheroffres.htm">Découvrez nos offres</a></li>
+          <li><a href="lireblog.htm">Visitez notre blog</a></li>
+          <li><a href="statistique.htm">Nos statistique</a></li>
         </ul>
               <div class="hbg"> <img src="images/im1.jpg" width="600" height="289" alt="" />
         <div class="logo">

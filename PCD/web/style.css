@@ -227,7 +227,6 @@ ul.ex_menu li a:hover {
 	background:#78bbe6;
 }
 .fbg img {
-	padding:4px;
 	border:1px solid #cfd2d4;
 	background-color:#fff;
 }
@@ -248,11 +247,11 @@ ul.ex_menu li a:hover {
 }
 .fbg .c2 {
 	padding:0 15px;
-	width:324px;
+	width:300px;
 }
 .fbg .c3 {
-	padding:0 0 0 15px;
-	width:290px;
+	padding:0 0 0 0px;
+	width:400px;
 	background:none;
 }
 .fbg .c1 img {

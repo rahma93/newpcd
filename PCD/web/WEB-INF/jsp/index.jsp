@@ -16,7 +16,7 @@
     
      
         <div >
-            <iframe height="800" width="800" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
+            <iframe height="800" width="1200" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
             </iframe>
         </div>
 </body>

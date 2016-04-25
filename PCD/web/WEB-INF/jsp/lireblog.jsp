@@ -12,10 +12,7 @@
 	
 	</div>
 	
-    <iframe>
-    
-     
-        lire notre blog
-    </iframe>
+     <iframe height="800" width="900" src="blog.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
+            </iframe>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 12 avr. 2016 12:38:54 by Hibernate Tools 4.3.1 -->
+<!-- Generated 24 avr. 2016 23:55:04 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="model.Article" table="article" catalog="pcd" optimistic-lock="version">
         <id name="idarticle" type="java.lang.Integer">
@@ -14,6 +14,9 @@
         <many-to-one name="forum" class="model.Forum" fetch="select">
             <column name="idforum" />
         </many-to-one>
+        <property name="nomarticle" type="string">
+            <column name="nomarticle" />
+        </property>
         <property name="articlecontent" type="string">
             <column name="articlecontent" length="65535" />
         </property>

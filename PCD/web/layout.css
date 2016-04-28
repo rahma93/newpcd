@@ -116,7 +116,7 @@ panelGroup{ background: #1E7FCB;
 .register{    
           color: #000;
 }
-html div, span, applet, object, iframe,h2, h4, h5, p, blockquote, pre,
+html div, span, applet, object, iframe, h4, h5, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -124,7 +124,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, label, legend,
  caption, tfoot, thead,
-article, aside, canvas, details, embed,
+article, aside,details, embed,
 figure, figcaption, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {

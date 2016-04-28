@@ -12,26 +12,39 @@ and open the template in the editor.
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-       >
+       xmlns:p="http://primefaces.org/ui">
     <head>
         <title>TODO supply a title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
         
-
-        <ui:repeat var="entry" value="#{ArBean.list}" varStatus="status">
+        <a href="ajouterarticle.xhtml"> <h4>Ajouter un Article</h4> </a>
+        
+        <h:form>
+        <ui:repeat var="entry" value="#{ArBean.list1}" varStatus="status">
      <div class="post_box">
-         
-            
+          
          <h2>#{entry.key.nomarticle}</h2>		
-         <div class="news_meta">Posted by #{entry.value.nomagent} #{entry.value.prenomagent} ,#{entry.key.date1} </div>
+         <div class="news_meta">Posted on #{entry.key.date1} </div>
                 <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="images/templatemo_image_01.jpg" alt="image 1" /></a></div>
                 <p align="justify"></p>
               <div class="cleaner">#{entry.key.articlecontent}</div>
-         </div>  
-       
-           </ui:repeat>
+         </div> 
+            <ui:repeat var="entry1" value="#{entry.value}" >
+               
+                  
+           <div class="cleaner">#{entry1.commentairecontent} </div> 
           
+           <f:param name="idart" value="#{entry.key.idarticle}" />
+                
+            </ui:repeat>
+            
+                
+                <h:inputText class="register-input" value="#{ComBean.map[entry.key.idarticle]}"/>
+            <h:commandButton class="register-button" value="commenter" action="#{ComBean.savecommentaires(entry.key.idarticle)}" />
+            
+        </ui:repeat>
+          </h:form>   
     </body>
 </html>

@@ -39,7 +39,7 @@ if (navigator.geolocation) {
 </script>
     </h:head>
      <h:body>
-       <h:form>  
+         <center>  <h:form>  
            <p:gmap widgetVar="w_gmap" type="terrain" center="34.7478469,10.7661630" zoom="13" model="#{markersViewBean.advancedModel}"  style="width:600px;height:400px" >
  
         <p:ajax event="overlaySelect" listener="#{markersViewBean.onMarkerSelect}" />
@@ -59,6 +59,7 @@ if (navigator.geolocation) {
         <p:graphicImage  name="pharmacie.png" />
     </p:outputPanel>
 </h:form>
+         </center>
     </h:body>
 </html>
 

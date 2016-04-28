@@ -1,4 +1,10 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
@@ -25,25 +31,25 @@
 
         
     </h:head>
-    <h:body>
        
         <h:form class="register" id="agentForm">
-                        
-                        <a href="chooseinscrit.xhtml">  <h4>Retour en arrière</h4> </a>
-                         <h1 class="register-title"> Inscription </h1>
+            <table>       <th>
+               
+                         <h2 class="register-title"> Inscription </h2>
                         
                          <h:inputText class="register-input" p:placeholder="NOM" value="#{ABean.nomagent}" required="true" />
                          <h:inputText class="register-input" p:placeholder="PRENOM" value="#{ABean.prenomagent}" required="true"/>
                         <h:inputSecret class="register-input" p:placeholder="Mot de passe" value="#{ABean.passwordagent}" required="true"/>
-			<h:inputText class="register-input" p:placeholder="Email" value="#{ABean.emailagent}" required="true"/>
+			                                                 </th><th>
+<h:inputText class="register-input" p:placeholder="Email" value="#{ABean.emailagent}" required="true"/>
                         <h:inputText class="register-input" p:placeholder="Ville" value="#{ABean.nomvilleagent}" required="true"/>
-                        <h:inputText class="register-input" p:placeholder="Adresse" value="#{ABean.nompadresseagent}" required="true"/>
-                        <h:inputText class="register-input" p:placeholder="Code Postal" value="#{ABean.codepostalagent}" required="true"/>
+ <h:inputText class="register-input" p:placeholder="Adresse" value="#{ABean.nompadresseagent}" required="true"/>
+                                                                      </th><th>
+   <h:inputText class="register-input" p:placeholder="Code Postal" value="#{ABean.codepostalagent}" required="true"/>
                         <h:inputText class="register-input" p:placeholder="Téléphone" value="#{ABean.telagent}" required="true"/>
-                        <table>
-                            <tr>
-                                <td><h:outputLabel class="register-input" value="Proprieté:" /></td>
-                                <td><h:selectOneMenu styleClass="menu" id="select" value="#{ABean.typeagent}">
+                  
+                    <h7> Proprieté:</h7>  
+<h:selectOneMenu styleClass="menu" id="select" value="#{ABean.typeagent}">
                                 
                                 <f:selectItem itemValue="1" itemLabel="Clinique" />
                                 <f:selectItem itemValue="2" itemLabel="Médecin" />
@@ -51,25 +57,26 @@
                                 <f:selectItem itemValue="4" itemLabel="Pharmacien" />
                                 <f:selectItem itemValue="5" itemLabel="Hôpital" />
                                 
-                                 </h:selectOneMenu></td>
-                                </tr>
-                                    </table>
-                        
+                                 </h:selectOneMenu>
+                                                 </th><th>
+         
+              
                         <h:inputText class="register-input" id="a" p:placeholder="Longtitude" value="#{ABean.lat}" required="true"/>
                         
                         
                         <h:inputText class="register-input" id="b" p:placeholder="Latitude" value="#{ABean.lon}" required="true"/>
                         
                         <h:inputText class="register-input" id="c" p:placeholder="Description Offre" value="#{ABean.offre}" required="true"/>
-                        
+                                                 </th><th>
+ 
                         <h:inputText class="register-input" id="d" p:placeholder="URL photo" value="#{ABean.urlphoto}" required="true"/>
                         
                     <h:commandButton class="register-button" value="Submit" action="#{ABean.saveagent()}" />
-                        
+                </th>
+            </table>
 		</h:form>
        
-   
-   </h:body>
+
     
         
 </html>

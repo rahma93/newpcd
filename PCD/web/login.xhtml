@@ -10,7 +10,7 @@
 
     </h:head>
     <h:body>
-       
+        <center>
 		<h:form id="form" class="register">
                     
                          <h:panelGroup rendered="#{not empty user}">
@@ -26,20 +26,20 @@
              
                             <h:inputText class="register-input" id="email" value="#{ABean.emailagent}" a:placeholder="Entrez votre Email" required="true" />
 
-                            <h:inputSecret class="register-input" id="pswd" value="#{ABean.passwordagent}" a:placeholder="Entrez votre mot de passe?" required="true" /> 
+                            <h:inputSecret class="register-input" id="pswd" value="#{ABean.passwordagent}" a:placeholder="Entrez votre mot de passe" required="true" /> 
                             
-                            <h4> <p:commandButton update="form" class="register-button" value="Se connecter" action="#{ABean.verifyUser}" /></h4>
+                            <center> <h4> <p:commandButton update="form" class="register-button" value="Se connecter" action="#{ABean.verifyUser}" /></h4>
+                            </center>
+                        <a href="chooseinscrit.htm"> <h4>Nouveau utilisateur ?</h4> </a>
                         
-                        <a href="chooseinscrit.xhtml"> <h4>Nouveau utilisateur ?</h4> </a>
-                        <h3> </h3>
-                        <a href="pswdforgotten.xhtml"> <h4>Mot de passe oublié ?</h4> </a>
+                        <a href="pswdforgotten.htm"> <h4>Mot de passe oublié ?</h4> </a>
                         
                         </h:panelGroup>
                     
 		</h:form>
         
        
-        
+        </center>
         
         
      

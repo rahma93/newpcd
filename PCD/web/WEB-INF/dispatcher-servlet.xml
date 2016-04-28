@@ -18,8 +18,21 @@
     <bean class="controller.RegisterController" id="RegisterKey"/> 
     <bean class="controller.PswdforgottenController" id="PswdforgottenKey"/> 
     <bean class="controller.MapController" id="MapKey"/> 
-    <bean class="controller.StatController" id="StatKey"/> 
+    <bean class="controller.StatController" id="StatKey"/>
+    <bean class="controller.addController" id="addKey"/>
 
+    
+    
+        <bean class="controller.adminloginController" id="adminloginKey"/>
+    <bean class="controller.affichearticleController" id="affichearticleKey"/>
+    <bean class="controller.loginmembreController" id="loginmembreKey"/>
+    <bean class="controller.modifagentController" id="modifagentKey"/>
+    <bean class="controller.modifmembreController" id="modifmembreKey"/>
+    <bean class="controller.rechercheController" id="rechercheKey"/>
+    <bean class="controller.resultatrechercheController" id="resultatrechercheKey"/>
+
+        <bean class="controller.contactController" id="contactKey"/>
+    <bean class="controller.chooseinscritController" id="chooseinscritKey"/>
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -38,6 +51,21 @@
                 <prop key="pswdforgotten.htm">PswdforgottenKey</prop>
                <prop key="map.htm">MapKey</prop>
                <prop key="statistique.htm">StatKey</prop>
+               <prop key="addagent.htm">addKey</prop>
+               
+               
+               <prop key="adminlogin.htm">adminloginKey</prop>
+               <prop key="affichearticle.htm">affichearticleKey</prop>
+               <prop key="loginmembre.htm">loginmembreKey</prop>
+               <prop key="modifagent.htm">modifagentKey</prop>
+               <prop key="modifmembre.htm">modifmembreKey</prop>
+
+               <prop key="recherche.htm">rechercheKey</prop>
+               <prop key="resultatrecherche.htm">resultatrechercheKey</prop>
+               
+                    <prop key="chooseinscrit.htm">chooseinscritKey</prop>
+               <prop key="contact.htm">contactKey</prop>
+
 
             </props>
         </property>

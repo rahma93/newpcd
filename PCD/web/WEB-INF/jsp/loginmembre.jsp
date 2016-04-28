@@ -41,9 +41,9 @@
 
           <div id="menu">
 			<ul>
-				  <li ><a href="index.htm">Page d'accueil</a></li>
+				  <li class="active"><a href="index.htm">Page d'accueil</a></li>
               <li><a href="map.htm">Localisez vous</a></li>
-          <li class="active"><a href="afficheroffres.htm">Découvrez nos offres</a></li>
+          <li><a href="afficheroffres.htm">Découvrez nos offres</a></li>
           <li><a href="lireblog.htm">Visitez notre blog</a></li>
           <li><a href="statistique.htm">Contacter nous</a></li>
 			</ul>
@@ -70,7 +70,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         
         <div>
-            <iframe height="500" width="1000" src="afficheoffres.xhtml" name="targetframe" allowTransparency="no" scrolling="yes" frameborder="4" >
+            <iframe height="500" width="1200" src="login.xhtml" name="targetframe" allowTransparency="no" scrolling="no" frameborder="4" >
             </iframe>
             </div>
             <div class="footer">

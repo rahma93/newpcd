@@ -63,8 +63,17 @@
             <url-pattern>/WEB-INF/jsp/recherchecentre.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/statistique.jsp</url-pattern>
             <url-pattern>/WEB-INF/jsp/lireblog.jsp</url-pattern>
-            <include-prelude>/WEB-INF/jsp/view/header.jsp</include-prelude>
-            <include-coda>/WEB-INF/jsp/view/footer.jsp</include-coda>  
+                        <url-pattern>/WEB-INF/jsp/addagent.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/adminlogin.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/affichearticle.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/loginmembre.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/modifmembre.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/modifagent.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/recherche.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/resultatrecherche.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/contact.jsp</url-pattern>
+                        <url-pattern>/WEB-INF/jsp/chooseinscrit.jsp</url-pattern>
+    
 
         </jsp-property-group>
     </jsp-config>
